@@ -1,0 +1,33 @@
+.social {
+  display: flex;
+  flex-direction: column;
+  margin-right: 18rem;
+}
+.social div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.social div span {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 3rem;
+  color: #3e5649e8;
+}
+.social div a {
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+  color: white;
+  letter-spacing: 1px;
+}
+.social div a:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 1200px) {
+  .social {
+    margin-right: 0rem;
+    margin-bottom: 5rem;
+  }
+}

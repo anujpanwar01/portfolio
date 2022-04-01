@@ -1,0 +1,51 @@
+@import "../../common-sass/common.styles.scss";
+.themes {
+  position: fixed;
+  display: none;
+  // ;
+  top: 12%;
+  right: 2%;
+  //   display: flex;
+  flex-direction: column;
+  background-color: inherit;
+
+  border-radius: 0.5rem;
+  //   box-shadow: 0 0 1rem rgb(0, 0, 0);
+
+  &-btn {
+    width: 100%;
+    font-size: 1.4rem;
+    border: none !important;
+    padding: 2rem 6rem;
+    margin: 0 !important;
+    cursor: pointer;
+
+    &:hover {
+      // background-color: #ffa60023 !important;
+    }
+  }
+}
+// .active {
+//   background-color: #ffa60023 !important;
+// }
+.black {
+  background-color: black;
+}
+.theme-default {
+  border: 2px solid $color-primary;
+}
+.theme-black {
+  border: 2px solid $color-black-theme;
+}
+.theme-pink {
+  border: 2px solid $color-pink-thme;
+}
+.theme-black-active {
+  background-color: #00e5ff10 !important;
+}
+.theme-pink-active {
+  background-color: #d4ecdd17 !important;
+}
+.theme-default-active {
+  background-color: #ffa60023 !important;
+}

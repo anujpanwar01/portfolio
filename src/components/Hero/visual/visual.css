@@ -1,0 +1,100 @@
+.visual {
+  background-color: #40584b;
+  padding: 2.4rem 1.8rem;
+  width: 31%;
+  font-size: 1.8rem;
+  /* margin-left: 20rem; */
+  /* position: absolute;
+    right: 10%;
+    top: 0%; */
+  border-radius: 1rem;
+  z-index: 20;
+  /* border: 3px solid #2fff4b; */
+  box-shadow: 0 0rem 1rem rgb(33 50 58);
+  transition: transform 1s;
+}
+.visual:hover {
+  transform: scale(1.05);
+}
+.cl {
+  color: rgb(2, 255, 255);
+}
+.cl-n {
+  color: rgb(0, 255, 0);
+  text-decoration: underline;
+}
+.cl-m {
+  text-decoration: none;
+}
+.cl-big-brac {
+  color: rgb(255, 238, 0);
+}
+.cl-big-brac-close,
+.cl-sec-brac-close,
+.method {
+  margin-top: 1rem;
+}
+.cl-sec-brac,
+.cl-sec-brac-close {
+  color: rgb(214, 1, 214);
+}
+.cl-sec-brac-close,
+.method {
+  /* margin-top: 0.5rem; */
+  margin-left: 3rem;
+}
+.cons {
+  /* margin-top: 0.5rem; */
+  margin-left: 3rem;
+}
+.my-name {
+  margin-top: 0.5rem;
+  margin-left: 8rem;
+}
+.this {
+  color: orange;
+}
+.dot {
+  color: #e80000;
+}
+.str {
+  color: rgb(255, 230, 0);
+}
+.number {
+  color: rgb(250, 93, 250);
+}
+.title {
+  color: white;
+}
+.method {
+  margin-top: 0.5rem;
+}
+.method-data {
+  margin-left: 5rem;
+}
+@media only screen and (max-width: 1400px) {
+  .visual {
+    /* margin-left: 8rem; */
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .visual {
+    margin-top: 8rem;
+    /* margin-left: 8rem; */
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .visual {
+    /* margin-top: 5rem; */
+    /* margin-left: 8rem; */
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .visual {
+    width: 100%;
+    /* margin-top: 5rem; */
+  }
+}

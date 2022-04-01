@@ -1,0 +1,29 @@
+/* } */
+@import "./common-sass/common.styles.scss";
+/* //////////////////////////////////////////////////////////////////// */
+.default {
+  color: $color-primary;
+  background: linear-gradient(
+    to bottom right,
+    #020e21 10%,
+    #011d1e 51%,
+    #000000 100%
+  );
+}
+.black {
+  color: $color-black-theme;
+  background: linear-gradient(
+    to bottom right,
+    #201b1b 10%,
+    #212121 51%,
+    #303030 100%
+  );
+}
+.pink {
+  color: #d4ecdd;
+  background: linear-gradient(
+    to bottom right,
+    rgba(66, 39, 90, 1) 51%,
+    rgba(115, 75, 109, 1) 100%
+  );
+}

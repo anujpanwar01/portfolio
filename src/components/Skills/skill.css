@@ -1,0 +1,87 @@
+.skill {
+  padding: 12rem 0 14rem;
+  background-color: #3e5649e8;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* overflow-x: hidden; */
+  position: relative;
+  margin-bottom: 10rem;
+}
+.skill-set {
+  /* position: absolute; */
+  /* width: 150%; */
+  min-width: 100%;
+  /* animation-name: slide; */
+  animation-play-state: running;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-duration: 60s;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 500px) {
+  .skill-set {
+    text-align: center;
+  }
+  .skill-set span {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+/* ///////////////////////////////////////////////////////////////////// */
+@keyframes slide {
+  0% {
+    transform: translate(100%);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
+@keyframes slider {
+  0% {
+    transform: translate(100%);
+  }
+  100% {
+    transform: translate(-200%);
+  }
+}
+@keyframes slider3 {
+  0% {
+    transform: translate(300%);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
+.skill-set-2 {
+  display: block;
+  animation-name: slider;
+  animation-play-state: running;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-duration: 72s;
+  margin-left: -10%;
+  /* animation-delay: 1s; */
+}
+.skill-set-3 {
+  margin-left: -70%;
+  animation-name: slider3;
+  animation-play-state: running;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-duration: 72s;
+}
+.animation {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 6rem;
+}

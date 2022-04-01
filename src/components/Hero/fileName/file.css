@@ -1,0 +1,40 @@
+.file-name {
+  color: white;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  /* border-bottom: 0.1rem solid black; */
+}
+.file-name::after {
+  content: "";
+  height: 0.5px;
+  width: 100%;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  margin: 0.6rem 0 0.8rem;
+  grid-column: 1/-1;
+}
+.file-js {
+  color: yellow;
+}
+.circle {
+  display: inline-block;
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 50%;
+  background-color: red;
+}
+.circle:not(:last-child) {
+  margin-right: 0.8rem;
+}
+.circle-1 {
+}
+.circle-2 {
+  background-color: rgba(255, 196, 2, 0.897);
+}
+.circle-3 {
+  background-color: rgb(0, 185, 0);
+}
+.file-name div {
+  display: inline;
+  margin-right: 8rem;
+}

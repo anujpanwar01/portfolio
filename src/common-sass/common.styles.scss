@@ -1,0 +1,33 @@
+//colors
+$color-primary: #ffa500;
+$color-primary-hover: #ffa600e7;
+$color-text: #f8f8f8d2;
+
+$color-black-theme: #00e7ff;
+$color-pink-thme: #d4ecdd;
+///////////////////////////////////////////////////////////////////////
+@mixin tool-tip {
+  visibility: hidden;
+  width: 120px;
+  background-color: $color-text;
+  color: rgb(99, 17, 74);
+  text-align: center;
+  padding: 1.6rem 2px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+@mixin tool-tip-after {
+  content: " ";
+  position: absolute;
+  //   top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  //   border-color: black transparent transparent transparent;
+}

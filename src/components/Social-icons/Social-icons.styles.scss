@@ -1,0 +1,72 @@
+@import "../../common-sass/common.styles.scss";
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 4rem;
+  top: 40%;
+  cursor: pointer;
+  z-index: 500;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 150%;
+    background-color: inherit;
+    position: absolute;
+    left: 50%;
+  }
+
+  &::after {
+    top: 110%;
+  }
+  &::before {
+    bottom: 110%;
+    height: 115%;
+    z-index: -1;
+  }
+  .icon {
+    color: $color-text;
+  }
+  .icon:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+.logo-icon:hover .social-icons::before {
+  color: inherit !important;
+}
+///////////////////////////////////////////////////////@at-root
+.pink-social-icons {
+  &::before {
+    background-color: $color-pink-thme;
+  }
+}
+.black-social-icons {
+  &::before {
+    background-color: $color-black-theme;
+  }
+}
+.default-social-icons {
+  &::before {
+    background-color: $color-primary;
+  }
+}
+
+////////////////////////////////////////////////////////
+.pink-social-icon {
+  &:hover {
+    color: $color-pink-thme;
+  }
+}
+.black-social-icon {
+  &:hover {
+    color: $color-black-theme;
+  }
+}
+.default-social-icon {
+  &:hover {
+    color: $color-primary;
+  }
+}
