@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { FormContainer } from "./contact-form.styles";
 import CustomInput from "../custom-input/custom-input.component";
 import CustomBtn from "../custom-btn/custom-btn.component";
+import { ThemeContext } from "../../context/theme.context";
 function ContactForm() {
+  const { currentTheme } = useContext(ThemeContext);
+
   const intialState = {
     name: "",
     number: "",
@@ -71,7 +74,12 @@ function ContactForm() {
         handleChange={inputChangeHandler}
         placeholder="Write your message..."
       />
-      <CustomBtn className="btn" type="submit">
+      <CustomBtn
+        button
+        className="btn"
+        type="submit"
+        currentTheme={currentTheme}
+      >
         Submit
       </CustomBtn>
     </FormContainer>

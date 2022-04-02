@@ -12,7 +12,7 @@ export const CustomLinks = styled.a`
   &:link,
   &:visited {
     font-size: 1.4rem;
-    margin-right: 5rem;
+    margin-right: ${(props) => !props.marginRight && "5rem"};
     color: ${(props) => props.$pageLink && TextPremiumColor};
   }
   &:hover,

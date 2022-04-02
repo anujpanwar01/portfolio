@@ -75,8 +75,10 @@ function Header() {
           })}
 
           <CustomBtn
-            className={`btn theme-btn
-             ${themeHandler("btn-pink", "btn-black", "btn-default")}`}
+            button
+            currentTheme={currentTheme}
+            className="btn"
+            headerButton
             handleChange={toggleHandler}
           >
             Theme

@@ -2,16 +2,10 @@ import { useContext } from "react";
 import { ThemeContext } from "../../context/theme.context";
 import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 import CustomLink from "../custom-link/custom-link.component";
-import "./Social-icons.styles.scss";
+
+import { SocialIconsContainer } from "./social-icons.styles";
 const SocialIcons = function () {
   const { currentTheme } = useContext(ThemeContext);
-  const themeHandler = (class1, class2, class3) => {
-    return currentTheme === "pink"
-      ? class1
-      : currentTheme === "black"
-      ? class2
-      : class3;
-  };
 
   const iconsData = [
     {
@@ -37,30 +31,19 @@ const SocialIcons = function () {
   ];
 
   return (
-    <div
-      className={`social-icons 
-       ${themeHandler(
-         "pink-social-icons",
-         "black-social-icons",
-         "default-social-icons"
-       )}`}
-    >
+    <SocialIconsContainer currentTheme={currentTheme}>
       {iconsData.map(({ content, to }) => (
         <CustomLink
           key={Math.random() * 100}
-          className={`icon ${
-            currentTheme === "pink"
-              ? "pink-social-icon"
-              : currentTheme === "black"
-              ? "black-social-icon"
-              : "default-social-icon"
-          }`}
+          marginRight
+          $navLink={"nav-link"}
+          currentTheme={currentTheme}
           to={to}
         >
           {content}
         </CustomLink>
       ))}
-    </div>
+    </SocialIconsContainer>
   );
 };
 export default SocialIcons;

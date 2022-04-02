@@ -1,10 +1,20 @@
 import styled from "styled-components";
+import { css } from "styled-components";
 import {
   ColorDefault,
   ColorSecondary,
   ColorTertiary,
 } from "../../global-styles/common.styles";
 import { themeHandler } from "../../theme-function/theme-handler";
+
+// export const c = css`
+// ${({currentTheme})=>{
+//   switch(currentTheme){
+//     case 'black':
+//     return
+//   }
+// }}
+// `;
 
 export const SocialContainer = styled.div`
   display: flex;
@@ -33,6 +43,12 @@ export const IconContainer = styled.span`
       : ColorDefault};
 
   svg {
-    color: ${themeHandler(ColorDefault, "#fff", ColorTertiary)};
+    color: ${({ currentTheme }) => {
+      return currentTheme === "black"
+        ? "#000"
+        : currentTheme === "pink"
+        ? ColorDefault
+        : ColorTertiary;
+    }};
   }
 `;
