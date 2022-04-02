@@ -8,7 +8,8 @@
   //   display: flex;
   flex-direction: column;
   background-color: inherit;
-
+  // position: relative;
+  z-index: 100;
   border-radius: 0.5rem;
   //   box-shadow: 0 0 1rem rgb(0, 0, 0);
 
@@ -19,6 +20,7 @@
     padding: 2rem 6rem;
     margin: 0 !important;
     cursor: pointer;
+    background-color: transparent;
 
     &:hover {
       // background-color: #ffa60023 !important;

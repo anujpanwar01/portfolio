@@ -60,16 +60,13 @@ function Header() {
           <span>ap</span>
         </CustomLink>
         <nav>
-          {linkData.map(({ content, to, className }) => {
-            console.log(className);
+          {linkData.map(({ content, to }) => {
             return (
               <CustomLink
                 key={Math.random() * 600}
-                className={`nav-link ${themeHandler(
-                  "pink-link-theme",
-                  "black-link-theme",
-                  "default-link-theme"
-                )}`}
+                currentTheme={currentTheme}
+                $pageLink
+                $navLink={"nav-link"}
                 to={to}
               >
                 {content}

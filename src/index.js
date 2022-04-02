@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { ToggleProvider } from "./context/toggle.context";
 import { ThemeProvider } from "./context/theme.context";
-import "./styles.scss";
+// import "./styles.scss";
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <ToggleProvider>

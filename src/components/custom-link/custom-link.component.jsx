@@ -1,11 +1,12 @@
 import React from "react";
-import "./custom-link.styles.scss";
+// import "./custom-link.styles.scss";
+import { CustomLinks } from "./custom-link.styles";
 
-function CustomLink({ className, to, children }) {
+function CustomLink({ to, children, ...otherProps }) {
   return (
-    <a className={`link ${className}`} href={to}>
+    <CustomLinks href={to} {...otherProps}>
       {children}
-    </a>
+    </CustomLinks>
   );
 }
 

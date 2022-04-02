@@ -1,6 +1,8 @@
 .skill {
   padding: 12rem 0 14rem;
-  background-color: #3e5649e8;
+  /* background-color: #3e5649e8; */
+  position: relative;
+  z-index: 1;
   margin-bottom: 5rem;
   display: flex;
   align-items: center;
