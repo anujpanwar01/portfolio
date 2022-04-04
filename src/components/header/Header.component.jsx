@@ -68,6 +68,7 @@ function Header() {
                 $pageLink
                 $navLink={"nav-link"}
                 to={to}
+                style={{ marginRight: "5rem" }}
               >
                 {content}
               </CustomLink>

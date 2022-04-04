@@ -5,7 +5,7 @@ import Hero from "./components/Hero/Hero";
 import Best from "./components/ILove/Best";
 import Info from "./components/Info/Info";
 import Education from "./components/Education/Education";
-import Skill from "./components/Skills/skill";
+import Skill from "./components/Skills/skill.component";
 import ProjectPage from "./sections/projects/projects.sections";
 // import Project from "./components/Projects/Project";
 import FooterSection from "./sections/footer/footer.section";

@@ -11,8 +11,7 @@ import {
 export const CustomLinks = styled.a`
   &:link,
   &:visited {
-    font-size: 1.4rem;
-    margin-right: ${(props) => !props.marginRight && "5rem"};
+    font-size: ${(props) => (props.$footerLink ? "1.6rem" : "1.4rem")};
     color: ${(props) => props.$pageLink && TextPremiumColor};
   }
   &:hover,
@@ -32,13 +31,5 @@ export const CustomLinks = styled.a`
           return;
       }
     }}
-    ${
-      "" /* color: ${(props) =>
-      props.navLink && props.currentTheme === "black"
-        ? ColorSecondary
-        : props.currentTheme === "pink"
-        ? ColorTertiary
-        : ColorDefault};
-  } */
-    }
+    
 `;

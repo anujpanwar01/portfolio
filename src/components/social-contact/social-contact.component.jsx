@@ -15,6 +15,7 @@ function SocialContact() {
         </IconContainer>
 
         <CustomLink
+          $footerLink
           $navLink="nav-link"
           rel="noreferrer"
           target="_blank"
@@ -29,6 +30,7 @@ function SocialContact() {
           <FaVoicemail size={24} />
         </IconContainer>
         <CustomLink
+          $footerLink
           $navLink="nav-link"
           to="mailto:anujpanwar7911@gmail.com"
           currentTheme={currentTheme}
@@ -41,6 +43,7 @@ function SocialContact() {
           <FaPhoneAlt size={24} />
         </IconContainer>
         <CustomLink
+          $footerLink
           $nav-link="nav-link"
           to="tel:9634111164"
           currentTheme={currentTheme}

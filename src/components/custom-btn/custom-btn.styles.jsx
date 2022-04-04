@@ -58,7 +58,7 @@ export const ThemeHandlerHover = styled.button`
 `;
 
 export const CustomButtonStyle = styled(ThemeHandlerHover)`
-  padding: ${({ headerButton }) => headerButton && "1.2rem 3rem"};
+  padding: ${({ headerButton }) => headerButton && "1.2rem 3rem !important"};
   background-color: transparent;
   ${ThemeHandler}
 `;
