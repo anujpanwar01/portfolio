@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../context/theme.context";
-import ProjectCard from "../../components/Projects/projects-component";
+import ProjectCard from "../../components/project/projects.component";
 import projects from "../../all-data/project.json";
 import { SectionHeading } from "../../global-styles/common.styles";
 import { SectionProjects, BgVideo } from "./projects.styles";

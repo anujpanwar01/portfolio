@@ -1,21 +1,32 @@
-import CustomLink from "../custom-link/custom-link.component";
-import "./info.scss";
-import MyImage from "../Img/myimage.jpg";
-
+import { useContext } from "react";
+import { ThemeContext } from "../../context/theme.context";
+import CustomLink from "../../components/custom-link/custom-link.component";
+import MyImage from "../../assister/myimage.jpg";
+import {
+  AboutSection,
+  ImageContainer,
+  TextContainer,
+  AboutText,
+} from "./about.styles";
 import { themeHandler } from "../../theme-function/theme-handler";
+import { SectionHeading } from "../../global-styles/common.styles";
 
 function Info() {
+  const { currentTheme } = useContext(ThemeContext);
   return (
-    <div className="info">
-      <div className="g"></div>
-      <div className="img">
-        <div className="f"></div>
-        <img width={"100%"} src={MyImage} alt="Anuj Panwar" />
-      </div>
-      <div className="text">
-        <h4>Who I am</h4>
-        <h3>About Me</h3>
-        <aside className="parent-p">
+    <AboutSection>
+      <ImageContainer currentTheme={currentTheme}>
+        <img
+          style={{ borderRadius: "0.5rem" }}
+          width={"100%"}
+          src={MyImage}
+          alt="Anuj Panwar"
+        />
+      </ImageContainer>
+      <TextContainer>
+        <SectionHeading currentTheme={currentTheme}>Who I am</SectionHeading>
+        <h4>About Me</h4>
+        <AboutText>
           Hello my name is <strong>Anuj Panwar</strong>, Passionate about
           Front-end Development. I'm from Dehradun Uttarakhand, India. I Love to
           learn new skills and think creative i'm a Fresher looking for the job.
@@ -33,15 +44,8 @@ function Info() {
               <br />— Oprah Winfrey
             </strong>
           </p>
-        </aside>
-        {/* <iframe
-          src="./img/resume.zip"
-          width="100%"
-          height="500px"
-          title="resume"
-        >
-          Download
-        </iframe> */}
+        </AboutText>
+
         <CustomLink
           className={`btn info-btn ${themeHandler(
             "btn-pink",
@@ -55,8 +59,8 @@ function Info() {
         >
           Download CV
         </CustomLink>
-      </div>
-    </div>
+      </TextContainer>
+    </AboutSection>
   );
 }
 export default Info;

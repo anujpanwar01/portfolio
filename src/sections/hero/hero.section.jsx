@@ -1,16 +1,13 @@
 import { ThemeContext } from "../../context/theme.context";
 import { useContext } from "react";
 import { themeHandler, btn, typo } from "../../theme-function/theme-handler";
-
-import back from "../Img/back.jpg";
-
-import Themes from "../themes/themes.component";
+import Themes from "../../components/themes/themes.component";
+import { HeroSection, HeroText } from "./hero.styles";
+import CustomBtn from "../../components/custom-btn/custom-btn.component";
 import "./hero.scss";
 
-// import HeroImage from "../Img/hero.png";
-
-const gradient = (color, url = back) => {
-  return `linear-gradient(to right,${color}),url(${url})`;
+const gradient = (color) => {
+  return `linear-gradient(to right,${color})`;
 };
 
 function Hero() {
@@ -21,9 +18,8 @@ function Hero() {
   const defaultTheme = `rgba(2, 14, 33, 0.88), rgba(1, 29, 30, 0.88)`;
 
   return (
-    <section
+    <HeroSection
       id="home"
-      className="hero-section"
       style={
         currentTheme === "pink"
           ? { backgroundImage: gradient(pinkTheme) }
@@ -33,16 +29,18 @@ function Hero() {
       }
     >
       <Themes />
-      <div style={{ position: "relative" }}>
+      <HeroText>
         <p className={themeHandler(...typo)}>Hey there &nbsp; I'm</p>
         <h1>Anuj Panwar</h1>
-        <h3 className={themeHandler(...typo)}>Frontend Developer</h3>
-        <button className={`btn hero-btn ${themeHandler(...btn)}`}>
+        <h3 currentTheme={currentTheme} className={themeHandler(...typo)}>
+          Frontend Developer
+        </h3>
+        <CustomBtn button currentTheme={currentTheme} className={`btn`}>
           Let you know me!
-        </button>
+        </CustomBtn>
         <span className="hero-h3"></span>
-      </div>
-    </section>
+      </HeroText>
+    </HeroSection>
   );
 }
 export default Hero;

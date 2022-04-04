@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "./context/theme.context";
 import Header from "./components/header/Header.component";
-import Hero from "./components/Hero/Hero";
-import Best from "./components/ILove/Best";
-import Info from "./components/Info/Info";
+import Hero from "./sections/hero/hero.section";
+import Info from "./sections/about/about.section";
 import Education from "./components/Education/Education";
 import Skill from "./components/Skills/skill.component";
 import ProjectPage from "./sections/projects/projects.sections";
