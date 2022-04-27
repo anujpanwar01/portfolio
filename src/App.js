@@ -14,6 +14,7 @@ import { GlobalStyle } from "./global-styles/global.styles";
 import { NavContext } from "./context/nav.context";
 import { themeHandler } from "./global-styles/common.styles";
 import "./App.scss";
+import { Routes, Router } from "react-router-dom";
 
 function App() {
   const { nav } = useContext(NavContext);
