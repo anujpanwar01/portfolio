@@ -5,10 +5,6 @@ export const ColorDefault = "#ffa500";
 export const ColorSecondary = "#00e7ff";
 export const ColorTertiary = "#d4ecdd";
 
-export const DefaultGradient = "";
-export const SecondaryGradient = "";
-export const TertiaryGradient = "";
-
 export const TextPremiumColor = "#f8f8f8d2";
 export const TextPrimaryColor = "#fff";
 
@@ -41,3 +37,28 @@ export function themeHandler(currenttheme, color1, color2, color3) {
     ? color2
     : color3;
 }
+
+export const defaultGradient = css`
+  background: linear-gradient(
+    to bottom right,
+    #020e21 10%,
+    #011d1e 51%,
+    #000000 100%
+  );
+`;
+export const secondaryGradient = css`
+  background: linear-gradient(
+    to bottom right,
+    #201b1b 10%,
+    #212121 51%,
+    #303030 100%
+  );
+`;
+
+export const tertiaryGradient = css`
+  background: linear-gradient(
+    to bottom right,
+    rgba(66, 39, 90, 1) 51%,
+    rgba(115, 75, 109, 1) 100%
+  );
+`;

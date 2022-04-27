@@ -3,11 +3,9 @@ import { FormContainer } from "./contact-form.styles";
 import CustomInput from "../custom-input/custom-input.component";
 import CustomBtn from "../custom-btn/custom-btn.component";
 import { ThemeContext } from "../../context/theme.context";
-import { useNavigate } from "react-router-dom";
 
+import ThankYou from "../thank-you/thank-you.component";
 function ContactForm() {
-  let navigate = useNavigate();
-
   const { currentTheme } = useContext(ThemeContext);
 
   const intialState = {
@@ -48,7 +46,8 @@ function ContactForm() {
           );
         }
         console.log(res);
-        return navigate("/thank-you/");
+        // res.ok && <ThankYou />;
+        return alert(<ThankYou />);
       })
       .catch((error) => alert(error));
 
@@ -69,6 +68,7 @@ function ContactForm() {
   const { name, email, comment, number } = userInput;
   return (
     <FormContainer onSubmit={submitHandler}>
+      {/* <ThankYou /> */}
       {/* for netlify bot */}
       <CustomInput type="hidden" value="contact" name="form-name" />
 
