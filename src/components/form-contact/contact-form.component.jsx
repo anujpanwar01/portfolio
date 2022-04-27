@@ -39,8 +39,8 @@ function ContactForm() {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": event.target.getAttribute("name"),
-        ...name,
+        "form-name": "contact",
+        ...userInput,
       }),
     })
       .then(() => navigate("/thank-you/"))
@@ -62,10 +62,13 @@ function ContactForm() {
   return (
     <FormContainer
       name="contact"
-      method="post"
+      method="POST"
       onSubmit={submitHandler}
       netlify
     >
+      {/* for netlify bot */}
+      <CustomInput type="hidden" value="contact" name="form-name" />
+
       <CustomInput
         name="name"
         className="name"
