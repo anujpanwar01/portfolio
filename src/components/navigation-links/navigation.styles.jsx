@@ -22,7 +22,7 @@ const commonStyle = function (currenttheme) {
       currenttheme,
       "#00e5ff10",
       "#d4ecdd17",
-      "#ffa6000c"
+      "#242e1a"
     )};
     border-radius: 0.5rem;
     margin-right: 0rem;
