@@ -12,12 +12,16 @@ export const ThankYouSection = styled.section`
   justify-content: center;
   width: 100%;
   height: 100%;
+  background-color: #010;
 
   position: fixed;
-  top: -16%;
-  left: -3%;
+  top: 0;
 
-  background-color: ${({ currrenttheme }) =>
+  z-index: 50000;
+
+  opacity: 0.9;
+
+  background: ${({ currrenttheme }) =>
     themeHandler(
       currrenttheme,
       secondaryGradient,
@@ -31,8 +35,15 @@ export const ThankYouMsg = styled.div`
   flex-direction: column;
   color: black;
   background: #eee;
+  position: absolute;
+  ${"" /* top: -40%; */}
+  z-index: 80000;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
   padding: 2rem;
   border-radius: 0.5rem;
+  font-size: 1.6rem;
   h3 {
     margin-bottom: 1.6rem;
   }

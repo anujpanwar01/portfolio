@@ -4,9 +4,10 @@ import CustomInput from "../custom-input/custom-input.component";
 import CustomBtn from "../custom-btn/custom-btn.component";
 import { ThemeContext } from "../../context/theme.context";
 
-import ThankYou from "../thank-you/thank-you.component";
+import { ThankYouContext } from "../../context/thankyou.context";
 function ContactForm() {
   const { currentTheme } = useContext(ThemeContext);
+  const { thankyou, setThankyou } = useContext(ThankYouContext);
 
   const intialState = {
     name: "",
@@ -46,8 +47,8 @@ function ContactForm() {
           );
         }
         console.log(res);
-        // res.ok && <ThankYou />;
-        return alert(<ThankYou />);
+        setThankyou(!thankyou);
+        return res;
       })
       .catch((error) => alert(error));
 
