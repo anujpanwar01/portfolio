@@ -29,8 +29,6 @@ function ContactForm() {
   }
 
   const submitHandler = function (event) {
-    event.preventDefault();
-
     // const userData = {
     //   comment: userInput.comment,
     //   email: userInput.email,
@@ -43,10 +41,15 @@ function ContactForm() {
         ...userInput,
       }),
     })
-      .then(() => navigate("/thank-you/"))
+      .then((res) => {
+        console.log(res);
+        return navigate("/thank-you/");
+      })
       .catch((error) => alert(error));
 
+    event.preventDefault();
     //reset the input form value;
+
     setUserInput(intialState);
   };
 
@@ -62,9 +65,10 @@ function ContactForm() {
   return (
     <FormContainer
       name="contact"
-      method="POST"
+      method="post"
+      data-netlify="true"
       onSubmit={submitHandler}
-      netlify
+      data-netlify-honeypot="bot-field"
     >
       {/* for netlify bot */}
       <CustomInput type="hidden" value="contact" name="form-name" />
