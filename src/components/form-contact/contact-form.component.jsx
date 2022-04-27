@@ -42,6 +42,11 @@ function ContactForm() {
       }),
     })
       .then((res) => {
+        if (!res.ok) {
+          throw new Error(
+            "Your form Submission not submitted please try again."
+          );
+        }
         console.log(res);
         return navigate("/thank-you/");
       })
@@ -63,13 +68,7 @@ function ContactForm() {
 
   const { name, email, comment, number } = userInput;
   return (
-    <FormContainer
-      name="contact"
-      method="post"
-      data-netlify="true"
-      onSubmit={submitHandler}
-      data-netlify-honeypot="bot-field"
-    >
+    <FormContainer onSubmit={submitHandler}>
       {/* for netlify bot */}
       <CustomInput type="hidden" value="contact" name="form-name" />
 
