@@ -41,7 +41,7 @@ function ContactForm() {
       name="contact"
       method="POST"
       onSubmit={submitHandler}
-      data-netlify="true"
+      netlify
     >
       <CustomInput
         name="name"
