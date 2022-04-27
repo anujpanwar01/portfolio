@@ -3,7 +3,11 @@ import { FormContainer } from "./contact-form.styles";
 import CustomInput from "../custom-input/custom-input.component";
 import CustomBtn from "../custom-btn/custom-btn.component";
 import { ThemeContext } from "../../context/theme.context";
+import { useNavigate } from "react-router-dom";
+
 function ContactForm() {
+  let navigate = useNavigate();
+
   const { currentTheme } = useContext(ThemeContext);
 
   const intialState = {
@@ -15,6 +19,15 @@ function ContactForm() {
   //input fields
   const [userInput, setUserInput] = useState(intialState);
 
+  // url encode for netlify
+  function encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  }
+
   const submitHandler = function (event) {
     event.preventDefault();
 
@@ -22,6 +35,16 @@ function ContactForm() {
     //   comment: userInput.comment,
     //   email: userInput.email,
     // };
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": event.target.getAttribute("name"),
+        ...name,
+      }),
+    })
+      .then(() => navigate("/thank-you/"))
+      .catch((error) => alert(error));
 
     //reset the input form value;
     setUserInput(intialState);
@@ -39,7 +62,7 @@ function ContactForm() {
   return (
     <FormContainer
       name="contact"
-      method="POST"
+      method="post"
       onSubmit={submitHandler}
       netlify
     >
