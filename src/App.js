@@ -13,8 +13,10 @@ import SocialIcons from "./components/Social-icons/SocialIcons.component";
 import { GlobalStyle } from "./global-styles/global.styles";
 import { NavContext } from "./context/nav.context";
 import { themeHandler } from "./global-styles/common.styles";
+
 import "./App.scss";
-import { Routes, Router } from "react-router-dom";
+
+import ThankYou from "./components/thank-you/thank-you.component";
 
 function App() {
   const { nav } = useContext(NavContext);
@@ -29,7 +31,7 @@ function App() {
       <Info />
       <Education />
       <Skill />
-
+      <ThankYou />
       <ProjectPage />
       <FooterSection />
       {nav && (

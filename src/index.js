@@ -4,18 +4,21 @@ import App from "./App";
 import { ToggleProvider } from "./context/toggle.context";
 import { ThemeProvider } from "./context/theme.context";
 import { NavProvider } from "./context/nav.context";
-import { BrowserRouter as Router } from "react-router-dom";
+import { ThankYouProvider } from "./context/thankyou.context";
+;
 // import "./styles.scss";
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <Router>
+
     <ToggleProvider>
       <ThemeProvider>
-        <NavProvider>
-          <App />
-        </NavProvider>
+        <ThankYouProvider>
+          <NavProvider>
+            <App />
+          </NavProvider>
+        </ThankYouProvider>
       </ThemeProvider>
     </ToggleProvider>
-  </Router>,
+,
   rootElement
 );
