@@ -9,7 +9,7 @@ const Education = () => {
   const { currentTheme } = useContext(ThemeContext);
 
   return (
-    <section className="education">
+    <section className="education" id="education">
       <SectionHeading currentTheme={currentTheme}>Education</SectionHeading>
       <div>
         {education.map((data) => {

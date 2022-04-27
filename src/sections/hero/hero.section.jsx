@@ -5,6 +5,7 @@ import Themes from "../../components/themes/themes.component";
 import { HeroSection, HeroText } from "./hero.styles";
 import CustomBtn from "../../components/custom-btn/custom-btn.component";
 import "./hero.scss";
+import Toggler from "../../components/toggler/toggler.component";
 
 const gradient = (color) => {
   return `linear-gradient(to right,${color})`;
@@ -40,6 +41,7 @@ function Hero() {
         </CustomBtn>
         <span className="hero-h3"></span>
       </HeroText>
+      <Toggler />
     </HeroSection>
   );
 }

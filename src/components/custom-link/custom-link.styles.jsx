@@ -13,7 +13,31 @@ export const CustomLinks = styled.a`
   &:visited {
     font-size: ${(props) => (props.$footerLink ? "1.6rem" : "1.4rem")};
     color: ${(props) => props.$pageLink && TextPremiumColor};
-  }
+   
+    ${(props) => {
+      switch (props.$navLink) {
+        case "toggler-link":
+          return css`
+            margin-right: 0rem;
+            padding: 1.2rem 2rem;
+            color: ${props.currentTheme === "black"
+              ? ColorSecondary
+              : props.currentTheme === "pink"
+              ? ColorTertiary
+              : ColorDefault};
+
+            border: 2px solid
+              ${props.currentTheme === "black"
+                ? ColorSecondary
+                : props.currentTheme === "pink"
+                ? ColorTertiary
+                : ColorDefault};
+            border-radius: 0.5rem;
+          `;
+        default:
+          return;
+      }
+    }}
   &:hover,
   &:active {
     ${(props) => {
@@ -26,7 +50,20 @@ export const CustomLinks = styled.a`
               ? ColorTertiary
               : ColorDefault}; ;
           `;
+        case "toggler-link":
+          return css`
+            color: ${props.currentTheme === "black"
+              ? ColorSecondary
+              : props.currentTheme === "pink"
+              ? ColorTertiary
+              : ColorDefault};
 
+            background-color: ${props.currentTheme === "black"
+              ? "#00e5ff10"
+              : props.currentTheme === "pink"
+              ? "#d4ecdd17"
+              : "#ffa6000c"};
+          `;
         default:
           return;
       }

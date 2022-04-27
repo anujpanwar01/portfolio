@@ -10,6 +10,7 @@
     "react-dom": "^18.0.0",
     "react-icons": "^4.3.1",
     "react-scripts": "5.0.0",
+    "react-scroll": "^1.8.7",
     "sass": "^1.49.10",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"

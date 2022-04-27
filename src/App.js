@@ -11,12 +11,15 @@ import FooterSection from "./sections/footer/footer.section";
 // import Footer from "./components/Footer/Footer";
 import SocialIcons from "./components/Social-icons/SocialIcons.component";
 import { GlobalStyle } from "./global-styles/global.styles";
+import { NavContext } from "./context/nav.context";
+import { themeHandler } from "./global-styles/common.styles";
 import "./App.scss";
 
 function App() {
+  const { nav } = useContext(NavContext);
   const { currentTheme } = useContext(ThemeContext);
   return (
-    <div className={currentTheme}>
+    <div className={`app ${currentTheme}`}>
       <GlobalStyle />
       <Header />
       <SocialIcons />
@@ -28,6 +31,19 @@ function App() {
 
       <ProjectPage />
       <FooterSection />
+      {nav && (
+        <div
+          className="overlay"
+          style={{
+            backgroundColor: themeHandler(
+              currentTheme,
+              "#00e5ff05",
+              "#d4ecdd0a",
+              "#ffa60005"
+            ),
+          }}
+        ></div>
+      )}
     </div>
   );
 }

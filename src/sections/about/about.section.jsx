@@ -14,7 +14,7 @@ import { SectionHeading } from "../../global-styles/common.styles";
 function Info() {
   const { currentTheme } = useContext(ThemeContext);
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <ImageContainer currentTheme={currentTheme}>
         <img
           style={{ borderRadius: "0.5rem" }}
