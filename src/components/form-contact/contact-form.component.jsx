@@ -37,7 +37,7 @@ function ContactForm() {
 
   const { name, email, comment, number } = userInput;
   return (
-    <FormContainer onSubmit={submitHandler}>
+    <FormContainer onSubmit={submitHandler} netlify>
       <CustomInput
         name="name"
         className="name"

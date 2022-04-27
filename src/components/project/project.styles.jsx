@@ -22,6 +22,10 @@ export const ProjectContainer = styled.div`
       : projectBackground === "pink"
       ? pink
       : defaults};
+  @media (max-width: 1100px) {
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
   @media (max-width: 56.25em) {
     border-radius: 0;
     width: 100%;
@@ -56,11 +60,21 @@ export const ToolContainer = styled.div`
 `;
 export const ImageContainer = styled.div`
   width: 50rem;
-
+  background: ${({ title }) =>
+    title === "Keeper App"
+      ? "#EEEEEE"
+      : title === "Panwar Cloth"
+      ? "#FFEDED"
+      : null};
   background-size: cover;
   background-position: center;
+  border-radius: 0.5rem;
   ${"" /* margin-right: 5rem; */}
-  @media (max-width:56.25em) {
+  @media (max-width:1100px) {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  @media (max-width: 56.25em) {
     width: 100%;
     margin-bottom: 5rem;
   }

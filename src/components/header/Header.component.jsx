@@ -3,9 +3,12 @@ import { ToggleContext } from "../../context/toggle.context";
 import { ThemeContext } from "../../context/theme.context";
 import "./Header.scss";
 import { BsDiamond } from "react-icons/bs";
-import CustomLink from "../custom-link/custom-link.component";
+
 import CustomBtn from "../custom-btn/custom-btn.component";
 
+import { NavLinks } from "../navigation-links/navigation.styles";
+import NavigationLink from "../navigation-links/navigation-links.component";
+// import Toggler from "../toggler/toggler.component";
 // import Nav from "./Nav";
 // import Mylogo from "../../assister/m.png";
 // import Toggle from "./toggleBtn/Toggle";
@@ -37,7 +40,7 @@ function Header() {
       {/* <Toggle /> */}
       <div className="flex"></div>
       <div className="header">
-        <CustomLink
+        <NavLinks
           to={"#home"}
           className={`logo-container ${themeHandler(
             "pink-logo",
@@ -45,24 +48,15 @@ function Header() {
             "default-logo"
           )}`}
         >
-          <BsDiamond
-            className={`logo icon`}
-            size={46}
-            // color={
-            //   currentTheme === "pink"
-            //     ? "#f900ff"
-            //     : currentTheme === "black"
-            //     ? "blue"
-            //     : "#ffa500"
-            // }
-          />
+          <BsDiamond className={`logo icon`} size={46} />
 
           <span>ap</span>
-        </CustomLink>
-        <nav>
-          {linkData.map(({ content, to }) => {
+        </NavLinks>
+        {/* <nav> */}
+        {<NavigationLink identifier={"header"} />}
+        {/* {linkData.map(({ content, to }) => {
             return (
-              <CustomLink
+              <NavLinks
                 key={Math.random() * 600}
                 currentTheme={currentTheme}
                 $pageLink
@@ -71,21 +65,21 @@ function Header() {
                 style={{ marginRight: "5rem" }}
               >
                 {content}
-              </CustomLink>
+              </NavLinks>
             );
-          })}
-
-          <CustomBtn
-            button
-            currentTheme={currentTheme}
-            className="btn"
-            headerButton
-            handleChange={toggleHandler}
-          >
-            Theme
-            <span className="theme-btn-text ">Change Theme</span>
-          </CustomBtn>
-        </nav>
+          })} */}
+        {/* </nav> */}
+        <CustomBtn
+          button
+          currentTheme={currentTheme}
+          className="btn"
+          headerButton
+          handleChange={toggleHandler}
+          style={{ marginLeft: "2rem" }}
+        >
+          Theme
+          <span className="theme-btn-text ">Change Theme</span>
+        </CustomBtn>
       </div>
     </div>
   );

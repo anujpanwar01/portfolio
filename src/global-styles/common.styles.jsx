@@ -34,3 +34,10 @@ display:flex;
 align-items:center,
 justify-content:center,
 `;
+export function themeHandler(currenttheme, color1, color2, color3) {
+  return currenttheme === "black"
+    ? color1
+    : currenttheme === "pink"
+    ? color2
+    : color3;
+}

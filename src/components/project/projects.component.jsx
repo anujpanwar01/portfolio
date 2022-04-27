@@ -13,14 +13,13 @@ import {
 
 const ProjectCard = ({ detail }) => {
   const { currentTheme } = useContext(ThemeContext);
-  console.log(detail);
-  const { imgUrl, title, overview, tools } = detail;
+
+  const { imgUrl, title, overview, tools, source, netlify } = detail;
   const { first, second, third } = tools;
-  console.log(tools);
-  // console.log(JSON.parse(tools));
+
   return (
     <ProjectContainer projectBackground={currentTheme}>
-      <ImageContainer>
+      <ImageContainer title={title}>
         <img src={imgUrl} alt={title} />
       </ImageContainer>
       <ProjectDetail>
@@ -40,7 +39,7 @@ const ProjectCard = ({ detail }) => {
             // className="btn btn-1 "
             target="_blank"
             rel="noreferrer"
-            to="https://bhagirathi-travel-anujpanwar.netlify.app/"
+            to={netlify}
           >
             Live view
           </CustomLink>
@@ -48,7 +47,7 @@ const ProjectCard = ({ detail }) => {
             className={`btn hero-btn ${themeHandler(...btn)}`}
             target="_blank"
             rel="noreferrer"
-            to="https://github.com/anujpanwar01/Bhagirathi-Travels"
+            to={source}
           >
             Source code
           </CustomLink>
