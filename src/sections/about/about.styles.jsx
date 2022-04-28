@@ -5,6 +5,7 @@ import {
   ColorTertiary,
 } from "../../global-styles/common.styles";
 
+import { themeHandler } from "../../global-styles/common.styles";
 export const ImageContainer = styled.div`
   width: 30%;
   position: relative;
@@ -28,11 +29,12 @@ export const ImageContainer = styled.div`
     top: 5%;
     border: 2px solid
       ${({ currentTheme }) =>
-        currentTheme === "black"
-          ? ColorSecondary
-          : currentTheme === "pink"
-          ? ColorTertiary
-          : ColorDefault};
+        themeHandler(
+          currentTheme,
+          ColorSecondary,
+          ColorTertiary,
+          ColorDefault
+        )};
     z-index: -1;
 
     border-radius: 0.5rem;

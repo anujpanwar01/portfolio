@@ -10,7 +10,7 @@ import {
 export const ThemeHandler = css`
   ${(props) => {
     if (props.button) {
-      switch (props.currentTheme) {
+      switch (props.currenttheme) {
         case "default":
           return {
             color: ColorDefault,
@@ -34,7 +34,7 @@ export const ThemeHandler = css`
 
 export const ThemeHandlerHover = styled.button`
   ${(props) => {
-    switch (props.currentTheme) {
+    switch (props.currenttheme) {
       case "default":
         return css`
           &:hover {

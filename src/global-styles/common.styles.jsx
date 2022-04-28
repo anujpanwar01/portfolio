@@ -12,12 +12,9 @@ export const TextPrimaryColor = "#fff";
 export const SectionHeading = styled.h3`
   font-size: 3rem;
   font-weight: 300;
-  color: ${({ currentTheme }) =>
-    currentTheme === "pink"
-      ? ColorTertiary
-      : currentTheme === "black"
-      ? ColorSecondary
-      : ColorDefault};
+  color: ${({ currenttheme }) =>
+    themeHandler(currenttheme, ColorSecondary, ColorTertiary, ColorDefault)};
+
   font-family: inherit;
   margin-bottom: 6rem;
   letter-spacing: 1px;

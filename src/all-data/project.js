@@ -33,8 +33,10 @@ export const projectData = [
     title: "Bhagirathi Travels",
     imgUrl:
       "https://pbs.twimg.com/media/FNo1e--UYAsecBk?format=jpg&name=medium",
+
     overview:
-      "Hey do you want to come in Uttarkhand for vacctions? Let's book your car and enjoy Uttarkhand with your family & friends. In Bhagirathi Travel you find some cool offer to explore Uttarkhand like Mountains, waterfalls, lake and other some amizing things. Don't forget to Book your slot today.",
+      "Hey, do you want to come to Uttarkhand for vacation? Let's book your car and enjoy Uttarkhand with your family & friends. In Bhagirathi Travel you find some cool offers to explore Uttarkhand like Mountains, waterfalls, lakes, and other amazing things. Don't forget to book your slot today.",
+
     tools: {
       first: "Html",
       second: "Scss",
