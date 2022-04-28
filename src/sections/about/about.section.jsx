@@ -15,7 +15,7 @@ function Info() {
   const { currentTheme } = useContext(ThemeContext);
   return (
     <AboutSection id="about">
-      <ImageContainer currentTheme={currentTheme}>
+      <ImageContainer  currenttheme={currentTheme}>
         <img
           style={{ borderRadius: "0.5rem" }}
           width={"100%"}
@@ -24,17 +24,17 @@ function Info() {
         />
       </ImageContainer>
       <TextContainer>
-        <SectionHeading currentTheme={currentTheme}>Who I am</SectionHeading>
+        <SectionHeading  currenttheme={currentTheme}>Who I am</SectionHeading>
         <h4>About Me</h4>
         <AboutText>
-          Hello my name is <strong>Anuj Panwar</strong>, Passionate about
+          Hello, my name is <strong>Anuj Panwar</strong>, Passionate about
           Front-end Development. I'm from Dehradun Uttarakhand, India. I Love to
-          learn new skills and think creative i'm a Fresher looking for the job.
+          learn new skills and think creatively I'm a Fresher looking for a job.
           I build some projects to enhance my skills.
           <p>
-            I build projects using HTML5, CSS3, SCSS, JAVASCRIPT, REACT JS and
-            keep always looking for better SEO. I love create best visual effect
-            and features which one attract the users.
+            I build projects using HTML5, CSS3, SCSS, JAVASCRIPT, and REACT JS
+            and keep always looking for better SEO. I love to create the best
+            visual effects and features that attract users.
           </p>
           <p>
             <strong style={{ color: " #00ff14" }}>

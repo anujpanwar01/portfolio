@@ -6,10 +6,12 @@ import CustomLink from "../../components/custom-link/custom-link.component";
 import { SectionHeading } from "../../global-styles/common.styles";
 import { FooterContainer, Contact } from "./footer.styles";
 const FooterSection = () => {
+
   const { currentTheme } = useContext(ThemeContext);
+  
   return (
     <FooterContainer id="footer">
-      <SectionHeading currentTheme={currentTheme}>Contact Me!</SectionHeading>
+      <SectionHeading currenttheme={currentTheme}>Contact Me!</SectionHeading>
       <Contact>
         <SocialContact />
         <ContactForm />

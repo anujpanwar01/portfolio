@@ -82,7 +82,6 @@ export const NavLinks = styled(Link)`
 `;
 export const Navigation = styled.nav`
   ${({ nav }) => {
-    console.log(nav);
     switch (nav) {
       case "toggler":
         return NavStyles;

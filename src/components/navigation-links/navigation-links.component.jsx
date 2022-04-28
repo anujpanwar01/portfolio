@@ -1,10 +1,8 @@
-import CustomLink from "../custom-link/custom-link.component";
 import { useContext } from "react";
 
 import { ThemeContext } from "../../context/theme.context";
 import { Navigation, NavLinks } from "./navigation.styles";
 const NavigationLink = function ({ link, identifier }) {
-  //   const { toggle, setToggle } = useContext(ToggleContext);
   const { currentTheme } = useContext(ThemeContext);
 
   const linkData = [
@@ -21,13 +19,9 @@ const NavigationLink = function ({ link, identifier }) {
         <NavLinks
           key={Math.random() * 600}
           currenttheme={currentTheme}
-          // $toggler={"toggler-link"}
-          // currentTheme={currentTheme}
-          // $pageLink
           link={identifier}
           to={to}
           smooth={true}
-          // style={{ marginRight: "5rem" }}
         >
           {content}
         </NavLinks>
