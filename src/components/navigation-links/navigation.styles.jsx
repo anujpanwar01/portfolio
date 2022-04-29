@@ -12,7 +12,6 @@ export const NavStyles = css`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  ${"" /* position: absolute; */}
 
   bottom: 10%;
 `;

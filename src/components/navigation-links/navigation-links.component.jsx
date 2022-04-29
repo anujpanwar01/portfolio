@@ -2,6 +2,7 @@ import { useContext } from "react";
 
 import { ThemeContext } from "../../context/theme.context";
 import { Navigation, NavLinks } from "./navigation.styles";
+
 const NavigationLink = function ({ link, identifier }) {
   const { currentTheme } = useContext(ThemeContext);
 

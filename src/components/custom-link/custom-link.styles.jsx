@@ -1,12 +1,12 @@
-import styled from "styled-components";
-import { css } from "styled-components";
+import styled, { css } from "styled-components";
+
 import {
   ColorDefault,
   ColorSecondary,
   ColorTertiary,
   TextPremiumColor,
 } from "../../global-styles/common.styles";
-// import { themeHandler } from "../../theme-function/theme-handler";
+import { themeHandler } from "../../global-styles/common.styles";
 
 export const CustomLinks = styled.a`
   &:link,

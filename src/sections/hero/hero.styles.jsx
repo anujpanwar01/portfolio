@@ -22,6 +22,7 @@ export const HeroSection = styled.section`
   background-size: cover;
   background-position: center;
 
+  ${"" /* for gradient */}
   ${({ currenttheme }) =>
     themeHandler(
       currenttheme,

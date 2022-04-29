@@ -27,17 +27,8 @@ function Header() {
       : class3;
   };
 
-  const linkData = [
-    { className: "nav-link", content: "Home", to: "#home" },
-    { className: "nav-link", content: "About", to: "#home" },
-    { className: "nav-link", content: "Projects", to: "#home" },
-    { className: "nav-link", content: "Education", to: "#home" },
-    { className: "nav-link", content: "contact", to: "#home" },
-  ];
-
   return (
     <div>
-      {/* <Toggle /> */}
       <div className="flex"></div>
       <div className="header">
         <NavLinks
@@ -71,7 +62,7 @@ function Header() {
         {/* </nav> */}
         <CustomBtn
           button
-          currentTheme={currentTheme}
+          currenttheme={currentTheme}
           className="btn"
           headerButton
           handleChange={toggleHandler}

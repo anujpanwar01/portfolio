@@ -37,7 +37,7 @@ const SocialIcons = function () {
           key={Math.random() * 100}
           marginRight
           $navLink={"nav-link"}
-          currentTheme={currentTheme}
+          currenttheme={currentTheme}
           to={to}
         >
           {content}
