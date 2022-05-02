@@ -31,11 +31,16 @@
   position: relative;
 }
 .overlay {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+  // display: none;
+  @media only screen and (max-width: 900px) {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    z-index: 150000;
+    background-color: black;
 
-  opacity: 0.5;
+    opacity: 0.95;
+  }
 }

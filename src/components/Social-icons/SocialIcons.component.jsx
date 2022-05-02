@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 import CustomLink from "../custom-link/custom-link.component";
 
 import { SocialIconsContainer } from "./social-icons.styles";
-const SocialIcons = function () {
+const SocialIcons = function ({ isAboutSection }) {
   const { currentTheme } = useContext(ThemeContext);
 
   const iconsData = [
@@ -31,7 +31,7 @@ const SocialIcons = function () {
   ];
 
   return (
-    <SocialIconsContainer currentTheme={currentTheme}>
+    <SocialIconsContainer currenttheme={currentTheme} about={isAboutSection}>
       {iconsData.map(({ content, to }) => (
         <CustomLink
           key={Math.random() * 100}

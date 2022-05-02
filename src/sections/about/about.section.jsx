@@ -10,12 +10,13 @@ import {
 } from "./about.styles";
 import { themeHandler } from "../../theme-function/theme-handler";
 import { SectionHeading } from "../../global-styles/common.styles";
+import SocialIcons from "../../components/Social-icons/SocialIcons.component";
 
 function Info() {
   const { currentTheme } = useContext(ThemeContext);
   return (
     <AboutSection id="about">
-      <ImageContainer  currenttheme={currentTheme}>
+      <ImageContainer currenttheme={currentTheme}>
         <img
           style={{ borderRadius: "0.5rem" }}
           width={"100%"}
@@ -24,7 +25,7 @@ function Info() {
         />
       </ImageContainer>
       <TextContainer>
-        <SectionHeading  currenttheme={currentTheme}>Who I am</SectionHeading>
+        <SectionHeading currenttheme={currentTheme}>Who I am</SectionHeading>
         <h4>About Me</h4>
         <AboutText>
           Hello, my name is <strong>Anuj Panwar</strong>, Passionate about
@@ -45,7 +46,7 @@ function Info() {
             </strong>
           </p>
         </AboutText>
-
+        <SocialIcons isAboutSection={true} />
         <CustomLink
           className={`btn info-btn ${themeHandler(
             "btn-pink",

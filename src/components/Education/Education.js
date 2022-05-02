@@ -10,7 +10,7 @@ const Education = () => {
 
   return (
     <section className="education" id="education">
-      <SectionHeading currentTheme={currentTheme}>Education</SectionHeading>
+      <SectionHeading currenttheme={currentTheme}>Education</SectionHeading>
       <div>
         {education.map((data) => {
           return (

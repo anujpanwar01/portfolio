@@ -113,7 +113,7 @@ function ContactForm() {
         button
         className="btn"
         type="submit"
-        currentTheme={currentTheme}
+        currenttheme={currentTheme}
       >
         Submit
       </CustomBtn>

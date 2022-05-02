@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../context/theme.context";
 import { Navigation, NavLinks } from "./navigation.styles";
 
-const NavigationLink = function ({ link, identifier }) {
+const NavigationLink = function ({ link, identifier, id }) {
   const { currentTheme } = useContext(ThemeContext);
 
   const linkData = [
@@ -15,7 +15,7 @@ const NavigationLink = function ({ link, identifier }) {
   ];
 
   return (
-    <Navigation nav={link}>
+    <Navigation id={id} nav={link}>
       {linkData.map(({ content, to }) => (
         <NavLinks
           key={Math.random() * 600}

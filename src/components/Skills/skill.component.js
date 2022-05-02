@@ -14,7 +14,7 @@ function Skills() {
   const { currentTheme } = useContext(ThemeContext);
   return (
     <SkillSection>
-      <SectionHeading currentTheme={currentTheme}>
+      <SectionHeading currenttheme={currentTheme}>
         Skills & Tools
       </SectionHeading>
 
