@@ -28,9 +28,9 @@ export const ImageContainer = styled.div`
     right: 8%;
     top: 5%;
     border: 2px solid
-      ${({ currentTheme }) =>
+      ${({ currenttheme }) =>
         themeHandler(
-          currentTheme,
+          currenttheme,
           ColorSecondary,
           ColorTertiary,
           ColorDefault

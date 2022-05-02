@@ -11,7 +11,7 @@ const ProjectPage = () => {
 
   return (
     <SectionProjects id="projects">
-      <SectionHeading currentTheme={currentTheme}>Projects</SectionHeading>
+      <SectionHeading currenttheme={currentTheme}>Projects</SectionHeading>
       <BgVideo autoPlay loop muted>
         <source src={bgVideo} type="video/mp4" />
       </BgVideo>

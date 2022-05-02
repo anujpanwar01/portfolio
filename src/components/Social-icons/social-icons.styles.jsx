@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { themeHandler } from "../../theme-function/theme-handler";
+import { themeHandler } from "../../global-styles/common.styles";
 import {
   ColorDefault,
   ColorSecondary,
@@ -7,8 +7,9 @@ import {
 } from "../../global-styles/common.styles";
 export const SocialIconsContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  position: fixed;
+
+  flex-direction: ${({ about }) => (about ? "row" : "column")};
+  position: ${({ about }) => (about ? "relative" : "fixed")};
   left: 4rem;
   top: 40%;
   cursor: pointer;
@@ -19,12 +20,8 @@ export const SocialIconsContainer = styled.div`
     display: block;
     width: 3px;
     height: 150%;
-    background-color: ${({ currentTheme }) =>
-      currentTheme === "pink"
-        ? ColorTertiary
-        : currentTheme === "black"
-        ? ColorSecondary
-        : ColorDefault};
+    background-color: ${({ currenttheme }) =>
+      themeHandler(currenttheme, ColorSecondary, ColorTertiary, ColorDefault)};
     position: absolute;
     left: 50%;
     bottom: 106%;

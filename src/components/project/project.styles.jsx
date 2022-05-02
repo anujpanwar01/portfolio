@@ -64,7 +64,7 @@ export const ImageContainer = styled.div`
     title === "Keeper App"
       ? "#EEEEEE"
       : title === "Panwar Cloth"
-      ? "#FFEDED"
+      ? "#E6DDC6"
       : null};
   background-size: cover;
   background-position: center;

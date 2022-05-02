@@ -6,7 +6,7 @@ export const ToggleNav = styled.div`
   align-items: center;
   position: fixed;
   bottom: 6%;
-  z-index: 1500;
+  z-index: 1500000;
   right: 5%;
 
   @media (max-width: 900px) {
@@ -31,18 +31,46 @@ export const ToggleNav = styled.div`
     align-items: center;
     justify-content: center;
     background-color: #3e5649e8;
+    div {
+      display: flex;
+    }
     span {
       position: relative;
       width: 3rem;
       height: 2px;
       background-color: rgb(255, 255, 255);
       display: inline-block;
-      transition: all 0.2s;
+      transition: transform 0.5s ease-in;
+
       &:not(:last-child) {
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.9rem;
       }
     }
-   
+    .toggle {
+      width: 1.5rem;
+    }
+    .toggle1 {
+      transform: rotate(45deg);
+      width: 4rem;
+      transform: rotate(402deg) translate(7px, 9px);
+    }
+    .toggle2,
+    .toggle4 {
+      width: 2rem;
+      height: 3px;
+      transform: scale(0);
+    }
+    .toggle2 {
+      transform-origin: left;
+    }
+    .toggle4 {
+      transform-origin: right;
+    }
+    .toggle3 {
+      transform: rotate(-410deg) translate(9px, -9px);
+      width: 4rem;
+    }
+
     /* gap: 6px; */
   }
 `;

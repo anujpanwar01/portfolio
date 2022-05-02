@@ -6,6 +6,9 @@ export const projectData = [
     id: 3000,
     title: "Panwar Cloth",
     imgUrl: `${PanwarCloth}`,
+    overview: `This is my small online clothes shop. Want to buy budget clothes. Here you got branded clothes at a low price. Go to checkout my shop, and "click" the live button.  
+    This project was created by these tools-kits: React, Redux-toolkit, Redux-persist, firebase,  and Styled-components.
+    `,
     tools: {
       first: "Html",
       second: "React",

@@ -1,11 +1,9 @@
-// import { hover } from "@testing-library/user-event/dist/hover";
 import styled, { css } from "styled-components";
 import {
   ColorSecondary,
   ColorDefault,
   ColorTertiary,
 } from "../../global-styles/common.styles";
-// import { themeHandler } from "../../theme-function/theme-handler";
 
 export const ThemeHandler = css`
   ${(props) => {
