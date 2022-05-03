@@ -34,6 +34,14 @@ export function themeHandler(currenttheme, color1, color2, color3) {
     ? color2
     : color3;
 }
+export const commonThemeHanlder = function (currenttheme) {
+  return themeHandler(
+    currenttheme,
+    ColorSecondary,
+    ColorTertiary,
+    ColorDefault
+  );
+};
 
 export const defaultGradient = css`
   background: linear-gradient(

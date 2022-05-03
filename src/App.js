@@ -4,7 +4,7 @@ import { OverlayContext } from "./context/overlay.context";
 import Header from "./components/header/Header.component";
 import Hero from "./sections/hero/hero.section";
 import Info from "./sections/about/about.section";
-import Education from "./components/Education/Education";
+import EducationSection from "./sections/education/education.section";
 import Skill from "./components/Skills/skill.component";
 import ProjectPage from "./sections/projects/projects.sections";
 import FooterSection from "./sections/footer/footer.section";
@@ -35,7 +35,7 @@ function App() {
       {width > 700 && <SocialIcons />}
       <Hero />
       <Info />
-      <Education />
+      <EducationSection />
       <Skill />
       <ThankYou />
       <ProjectPage />

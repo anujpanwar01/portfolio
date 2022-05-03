@@ -17,6 +17,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   position: relative;
+  overflow-x:hidden;
 
 }
 a{

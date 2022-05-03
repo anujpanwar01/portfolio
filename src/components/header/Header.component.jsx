@@ -43,33 +43,17 @@ function Header() {
 
           <span>ap</span>
         </NavLinks>
-        {/* <nav> */}
         {<NavigationLink identifier={"header"} />}
-        {/* {linkData.map(({ content, to }) => {
-            return (
-              <NavLinks
-                key={Math.random() * 600}
-                currentTheme={currentTheme}
-                $pageLink
-                $navLink={"nav-link"}
-                to={to}
-                style={{ marginRight: "5rem" }}
-              >
-                {content}
-              </NavLinks>
-            );
-          })} */}
-        {/* </nav> */}
+
         <CustomBtn
-          button
+          button="button"
           currenttheme={currentTheme}
           className="btn"
           headerButton
           handleChange={toggleHandler}
           style={{ marginLeft: "2rem" }}
         >
-          Theme
-          <span className="theme-btn-text ">Change Theme</span>
+          <span className="theme-btn-text "> Theme</span>
         </CustomBtn>
       </div>
     </div>

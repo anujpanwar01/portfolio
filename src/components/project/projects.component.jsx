@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { themeHandler, btn } from "../../theme-function/theme-handler";
+// import { themeHandler, btn } from "../../theme-function/theme-handler";
 import CustomLink from "../custom-link/custom-link.component";
 import { ThemeContext } from "../../context/theme.context";
 
@@ -35,8 +35,8 @@ const ProjectCard = ({ detail }) => {
         </ToolContainer>
         <ButtonContainer>
           <CustomLink
-            className={`btn hero-btn ${themeHandler(...btn)}`}
-            // className="btn btn-1 "
+            currenttheme={currentTheme}
+            $navLink="button"
             target="_blank"
             rel="noreferrer"
             to={netlify}
@@ -44,7 +44,8 @@ const ProjectCard = ({ detail }) => {
             Live view
           </CustomLink>
           <CustomLink
-            className={`btn hero-btn ${themeHandler(...btn)}`}
+            currenttheme={currentTheme}
+            $navLink="button"
             target="_blank"
             rel="noreferrer"
             to={source}
