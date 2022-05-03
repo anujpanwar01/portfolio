@@ -20,7 +20,7 @@ export const SkillSection = styled.section`
 export const SkillSetContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 4rem;
+  grid-gap: 4rem;
   @supports not (gap: 4rem) {
   }
   @media (max-width: 650px) {
@@ -37,7 +37,7 @@ export const Skill = styled.div`
   justify-content: center;
   font-size: 2rem;
   color: white;
-  gap: 1rem;
+  grid-gap: 1rem;
   @supports not (gap: 1rem) {
     margin-bottom: 4rem;
     margin-right: 4rem;
@@ -48,7 +48,7 @@ export const Skill = styled.div`
 `;
 export const SkillIcon = styled.span`
   font-size: 6rem;
-  gap: 0;
+  grid-gap: 0;
   @supports not (gap: 0) {
     margin-bottom: 1rem;
   }

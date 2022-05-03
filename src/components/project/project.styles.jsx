@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const pink = "#36095e";
 const black = "#000";
@@ -97,7 +97,7 @@ export const ProjectDetail = styled.div`
 export const ButtonContainer = styled.div`
   display: flex;
   margin-top: 1rem;
-  gap: 1.6rem;
+  grid-gap: 1.6rem;
   @media (max-width: 56.25em) {
     margin-top: 2rem;
   }

@@ -31,7 +31,7 @@ p {
 }
 .btn{
     font-size: 1.6rem;
-  padding: 1.6rem 3rem;
+  padding: 1.4rem 3rem;
   border-radius: 0.5rem;
   cursor: pointer;
   letter-spacing: 1px;

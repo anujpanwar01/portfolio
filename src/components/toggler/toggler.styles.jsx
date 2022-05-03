@@ -2,7 +2,7 @@ import styled from "styled-components";
 export const ToggleNav = styled.div`
   display: none;
   flex-direction: column;
-  gap: 2rem;
+  grid-gap: 2rem;
   align-items: center;
   position: fixed;
   bottom: 6%;
