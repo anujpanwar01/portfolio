@@ -11,16 +11,18 @@ import FooterSection from "./sections/footer/footer.section";
 import SocialIcons from "./components/Social-icons/SocialIcons.component";
 import { GlobalStyle } from "./global-styles/global.styles";
 import { NavContext } from "./context/nav.context";
-
+import useWindowDimensions from "./components/size-detecter/size-detecter";
 import "./App.scss";
 
 import ThankYou from "./components/thank-you/thank-you.component";
 
 function App() {
+  const { width } = useWindowDimensions();
   const { currentTheme } = useContext(ThemeContext);
   const { isOverlayOpen, setIsOverlayOpen } = useContext(OverlayContext);
   const { nav, setNav } = useContext(NavContext);
 
+  console.log(width);
   const overlayHandler = (e) => {
     e.currentTarget.style.display = "none";
     setIsOverlayOpen(!isOverlayOpen);
@@ -30,7 +32,7 @@ function App() {
     <div className={`app ${currentTheme}`}>
       <GlobalStyle />
       <Header />
-      <SocialIcons />
+      {width > 700 && <SocialIcons />}
       <Hero />
       <Info />
       <Education />
