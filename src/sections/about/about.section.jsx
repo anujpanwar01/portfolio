@@ -1,4 +1,5 @@
 import { useContext } from "react";
+
 import { ThemeContext } from "../../context/theme.context";
 import CustomLink from "../../components/custom-link/custom-link.component";
 import MyImage from "../../assister/myimage.jpg";
@@ -11,9 +12,12 @@ import {
 import { themeHandler } from "../../theme-function/theme-handler";
 import { SectionHeading } from "../../global-styles/common.styles";
 import SocialIcons from "../../components/Social-icons/SocialIcons.component";
+import useWindowDimensions from "../../components/size-detecter/size-detecter";
 
 function Info() {
   const { currentTheme } = useContext(ThemeContext);
+  const { width } = useWindowDimensions();
+
   return (
     <AboutSection id="about">
       <ImageContainer currenttheme={currentTheme}>
@@ -46,7 +50,7 @@ function Info() {
             </strong>
           </p>
         </AboutText>
-        <SocialIcons isAboutSection={true} />
+        {width <= 700 && <SocialIcons isAboutSection={"about"} />}
         <CustomLink
           className={`btn info-btn ${themeHandler(
             "btn-pink",
