@@ -71,11 +71,16 @@ function ContactForm() {
     <FormContainer onSubmit={submitHandler}>
       {/* <ThankYou /> */}
       {/* for netlify bot */}
-      <CustomInput type="hidden" value="contact" name="form-name" />
+      <CustomInput
+        type="hidden"
+        className="footer-form"
+        value="contact"
+        name="form-name"
+      />
 
       <CustomInput
         name="name"
-        className="name"
+        className="name footer-form"
         value={name}
         handleChange={inputChangeHandler}
         required
@@ -86,6 +91,7 @@ function ContactForm() {
       <div>
         <CustomInput
           name="email"
+          className="footer-form"
           value={email}
           onChange={inputChangeHandler}
           required
@@ -94,16 +100,18 @@ function ContactForm() {
         />
         <CustomInput
           name="number"
+          className="footer-form"
           width={"100%"}
           value={number}
           onChange={inputChangeHandler}
-          required
+          // required
           type="number"
-          placeholder="Phone number..."
+          placeholder="Phone number (optional) .... "
         />
       </div>
       <CustomInput
         element={"text-area"}
+        className="footer-form"
         value={comment}
         name="comment"
         handleChange={inputChangeHandler}
@@ -111,7 +119,7 @@ function ContactForm() {
       />
       <CustomBtn
         button
-        className="btn"
+        className="btn footer-contact"
         type="submit"
         currenttheme={currentTheme}
       >

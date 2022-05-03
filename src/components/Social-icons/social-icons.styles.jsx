@@ -10,19 +10,15 @@ export const SocialIconsContainer = styled.div`
 
   flex-direction: ${({ about }) => (about ? "row" : "column")};
   position: ${({ about }) => (about ? "relative" : "fixed")};
-  left: ${({ about }) => (about ? "0" : "4rem")};
+  left: ${({ about }) => (about ? "0" : "4.05rem")};
   margin-bottom: ${({ about }) => (about ? "2.4rem" : "0")};
-  top: 41%;
+  top: 40%;
   cursor: pointer;
   z-index: 500;
   gap: ${({ about }) => (about ? "3rem" : "2rem")};
 
-  @media only screen and (max-width: 1200px) {
-    top: 41%;
-  }
   @media only screen and (max-width: 900px) {
     left: 2.8rem;
-    top: 42%;
   }
   @media only screen and (max-width: 700px) {
     left: 0;

@@ -9,7 +9,7 @@ import {
   TextContainer,
   AboutText,
 } from "./about.styles";
-import { themeHandler } from "../../theme-function/theme-handler";
+// import { themeHandler } from "../../theme-function/theme-handler";
 import { SectionHeading } from "../../global-styles/common.styles";
 import SocialIcons from "../../components/Social-icons/SocialIcons.component";
 import useWindowDimensions from "../../components/size-detecter/size-detecter";
@@ -52,11 +52,8 @@ function Info() {
         </AboutText>
         {width <= 700 && <SocialIcons isAboutSection={"about"} />}
         <CustomLink
-          className={`btn info-btn ${themeHandler(
-            "btn-pink",
-            "btn-black",
-            "btn-default"
-          )}`}
+          currenttheme={currentTheme}
+          $navLink="button"
           target="_blank"
           rel="noreferrer"
           to="https://my.indeed.com/p/anujp-hskl1dp"

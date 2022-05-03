@@ -1,12 +1,10 @@
 import styled, { css } from "styled-components";
 import { Link } from "react-scroll/modules";
+import { TextPremiumColor } from "../../global-styles/common.styles";
 import {
-  ColorDefault,
-  ColorSecondary,
-  ColorTertiary,
-  TextPremiumColor,
+  themeHandler,
+  commonThemeHanlder,
 } from "../../global-styles/common.styles";
-import { themeHandler } from "../../global-styles/common.styles";
 
 export const NavStyles = css`
   display: flex;
@@ -28,12 +26,7 @@ const commonStyle = function (currenttheme) {
     padding: 1.2rem 2rem;
     border-radius: 0.5rem;
 
-    color: ${themeHandler(
-      currenttheme,
-      ColorSecondary,
-      ColorTertiary,
-      ColorDefault
-    )};
+    color: ${commonThemeHanlder(currenttheme)};
   `;
   return common;
 };
@@ -51,13 +44,7 @@ export const NavLinks = styled(Link)`
           ${commonStyle(currenttheme)}
           &:hover,
           &:active {
-            border: 2px solid
-              ${themeHandler(
-                currenttheme,
-                ColorSecondary,
-                ColorTertiary,
-                ColorDefault
-              )};
+            border: 2px solid ${commonThemeHanlder(currenttheme)};
             color: ${TextPremiumColor};
 
             background: transparent;
@@ -74,10 +61,37 @@ export const NavLinks = styled(Link)`
             background: transparent;
           }
         `;
+      case "button":
+        return css`
+          margin-top: 3rem;
+          padding: 1.8rem 3rem;
+          color: ${commonThemeHanlder(currenttheme)};
+
+          border: 2px solid ${commonThemeHanlder(currenttheme)};
+        `;
       default:
         return;
     }
   }}
+
+  &:hover,&:active {
+    ${({ link }) => {
+      switch (link) {
+        case "button":
+          return css`
+            background-color: ${({ currenttheme }) =>
+              themeHandler(
+                currenttheme,
+                "#00e5ff10",
+                "#d4ecdd17",
+                "#ffa6000c"
+              )};
+          `;
+        default:
+          return;
+      }
+    }}
+  } ;
 `;
 export const Navigation = styled.nav`
   ${({ nav }) => {

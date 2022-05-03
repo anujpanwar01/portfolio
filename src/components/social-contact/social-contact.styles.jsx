@@ -1,20 +1,10 @@
 import styled from "styled-components";
-import { css } from "styled-components";
+
 import {
   ColorDefault,
   ColorSecondary,
   ColorTertiary,
 } from "../../global-styles/common.styles";
-import { themeHandler } from "../../theme-function/theme-handler";
-
-// export const c = css`
-// ${({currentTheme})=>{
-//   switch(currentTheme){
-//     case 'black':
-//     return
-//   }
-// }}
-// `;
 
 export const SocialContainer = styled.div`
   display: flex;

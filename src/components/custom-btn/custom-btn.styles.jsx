@@ -3,12 +3,13 @@ import {
   ColorSecondary,
   ColorDefault,
   ColorTertiary,
+  commonThemeHanlder,
 } from "../../global-styles/common.styles";
 
 export const ThemeHandler = css`
-  ${(props) => {
-    if (props.button) {
-      switch (props.currenttheme) {
+  ${({ button, currenttheme }) => {
+    if (button) {
+      switch (currenttheme) {
         case "default":
           return {
             color: ColorDefault,
@@ -25,7 +26,6 @@ export const ThemeHandler = css`
             border: `2px solid ${ColorTertiary}`,
           };
       }
-    } else if (props.a) {
     }
   }}
 `;
@@ -56,6 +56,9 @@ export const ThemeHandlerHover = styled.button`
 `;
 
 export const CustomButtonStyle = styled(ThemeHandlerHover)`
+  ${({ button }) => console.log(button)}
+  color:${({ button, currenttheme }) =>
+    button && commonThemeHanlder(currenttheme)}
   padding: ${({ headerButton }) => headerButton && "1.2rem 3rem !important"};
   background-color: transparent;
   ${ThemeHandler}
