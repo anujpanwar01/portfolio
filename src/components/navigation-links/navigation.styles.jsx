@@ -9,7 +9,7 @@ import {
 export const NavStyles = css`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  grid-gap: 2.4rem;
 
   bottom: 10%;
 `;
@@ -64,7 +64,7 @@ export const NavLinks = styled(Link)`
       case "button":
         return css`
           margin-top: 3rem;
-          padding: 1.8rem 3rem;
+          padding: 1.8rem 3rem !important;
           color: ${commonThemeHanlder(currenttheme)};
 
           border: 2px solid ${commonThemeHanlder(currenttheme)};
@@ -102,7 +102,7 @@ export const Navigation = styled.nav`
       default:
         return css`
           display: flex;
-          gap: 2rem;
+          grid-gap: 2rem;
         `;
     }
   }}

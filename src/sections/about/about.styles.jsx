@@ -49,7 +49,7 @@ export const AboutSection = styled.section`
   align-items: flex-start;
   padding: 20rem 0 15rem;
   margin-bottom: 10rem;
-  gap: 5rem;
+  grid-gap: 5rem;
 
   &:hover ${ImageContainer}::before {
     transform: scale(1);
@@ -64,7 +64,7 @@ export const TextContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 25%;
-  gap: 0;
+  grid-gap: 0;
   h3 {
     text-align: left;
     margin-bottom: 2rem;
@@ -83,7 +83,7 @@ export const TextContainer = styled.div`
   @media (max-width: 500px) {
     width: 80%;
   }
-  @supports not (gap: 0) {
+  @supports not (grid-gap: 0) {
     margin-left: 5rem;
   }
 `;

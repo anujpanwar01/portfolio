@@ -7,7 +7,6 @@ import {
 } from "../../global-styles/common.styles";
 export const SocialIconsContainer = styled.div`
   display: flex;
-
   flex-direction: ${({ about }) => (about ? "row" : "column")};
   position: ${({ about }) => (about ? "relative" : "fixed")};
   left: ${({ about }) => (about ? "0" : "4.05rem")};
@@ -15,7 +14,7 @@ export const SocialIconsContainer = styled.div`
   top: 40%;
   cursor: pointer;
   z-index: 500;
-  gap: ${({ about }) => (about ? "3rem" : "2rem")};
+  grid-gap: ${({ about }) => (about ? "3rem" : "2rem")};
 
   @media only screen and (max-width: 900px) {
     left: 2.8rem;

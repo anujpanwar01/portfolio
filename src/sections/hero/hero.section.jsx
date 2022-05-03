@@ -19,7 +19,7 @@ function Hero() {
           className={`btn`}
           currenttheme={currentTheme}
           link="button"
-          to={"#about"}
+          to={"about"}
           smooth="true"
         >
           Let you know me!

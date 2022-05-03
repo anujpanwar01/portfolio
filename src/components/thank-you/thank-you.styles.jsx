@@ -44,6 +44,10 @@ export const ThankYouMsg = styled.div`
   padding: 2rem;
   border-radius: 0.5rem;
   font-size: 1.6rem;
+  @media only screen and (max-width: 600px) {
+    left: 30%;
+    transform: translateX(-22%);
+  }
   h3 {
     margin-bottom: 1.6rem;
   }
