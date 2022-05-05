@@ -1,19 +1,16 @@
 import styled from "styled-components";
-import {
-  ColorDefault,
-  ColorSecondary,
-  ColorTertiary,
-} from "../../global-styles/common.styles";
+import { commonThemeHanlder } from "../../global-styles/common.styles";
 
-import { themeHandler } from "../../global-styles/common.styles";
 export const ImageContainer = styled.div`
   width: 31%;
   position: relative;
   box-sizing: content-box;
   background-size: cover;
   z-index: 1;
+  margin-right: 5rem;
   @media (max-width: 900px) {
     width: 60%;
+    margin: 5rem 0 0;
   }
   @media (max-width: 500px) {
     width: 80%;
@@ -27,14 +24,8 @@ export const ImageContainer = styled.div`
     height: 100%;
     right: 8%;
     top: 5%;
-    border: 2px solid
-      ${({ currenttheme }) =>
-        themeHandler(
-          currenttheme,
-          ColorSecondary,
-          ColorTertiary,
-          ColorDefault
-        )};
+    border: 2px solid ${({ currenttheme }) => commonThemeHanlder(currenttheme)};
+
     z-index: -1;
 
     border-radius: 0.5rem;
@@ -49,7 +40,7 @@ export const AboutSection = styled.section`
   align-items: flex-start;
   padding: 20rem 0 15rem;
   margin-bottom: 10rem;
-  grid-gap: 5rem;
+  ${"" /* grid-gap: 5rem; */}
 
   &:hover ${ImageContainer}::before {
     transform: scale(1);

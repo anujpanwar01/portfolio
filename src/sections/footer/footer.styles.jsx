@@ -7,6 +7,7 @@ export const FooterContainer = styled.section`
   align-items: center;
   padding: 10rem 0 6rem;
   p {
+    font-size: 1.2rem;
   }
   @media (max-width: 75em) {
     padding: 9rem 2rem 8rem;

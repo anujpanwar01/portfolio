@@ -82,6 +82,7 @@ export const EducationDetails = styled.div`
     margin-right: 10rem;
     font-size: 2.4rem;
     color: white;
+    letter-spacing: 1px;
     @media only screen and (max-width: 570px) {
       font-size: 2rem;
     }
@@ -89,7 +90,7 @@ export const EducationDetails = styled.div`
   & p {
     margin: 0;
     align-self: flex-end;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: white;
     ${"" /* font-weight: 600; */}
   }

@@ -9,7 +9,6 @@ import {
   TextContainer,
   AboutText,
 } from "./about.styles";
-// import { themeHandler } from "../../theme-function/theme-handler";
 import { SectionHeading } from "../../global-styles/common.styles";
 import SocialIcons from "../../components/Social-icons/SocialIcons.component";
 import useWindowDimensions from "../../components/size-detecter/size-detecter";
