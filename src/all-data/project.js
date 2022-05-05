@@ -10,9 +10,9 @@ export const projectData = [
     This project was created by these tools-kits: React, Redux-toolkit, Redux-persist, firebase,  and Styled-components.
     `,
     tools: {
-      first: "Html",
-      second: "React",
-      third: "Redux-toolkit",
+      first: "styled-components",
+      second: "Next.js",
+      third: "Redux",
     },
     source: "https://github.com/anujpanwar01/panwar-cloth",
     netlify: "https://panwar-cloth-anujpanwar.netlify.app/",

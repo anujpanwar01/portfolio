@@ -11,11 +11,16 @@ import {
   ToolContainer,
 } from "./project.styles";
 
+const tool = function (obj) {
+  return Object.keys(obj).map((ele) => (
+    <li key={Math.random() * 9.24}>{obj[ele]}</li>
+  ));
+};
+
 const ProjectCard = ({ detail }) => {
   const { currentTheme } = useContext(ThemeContext);
 
   const { imgUrl, title, overview, tools, source, netlify } = detail;
-  const { first, second, third } = tools;
 
   return (
     <ProjectContainer projectBackground={currentTheme}>
@@ -25,13 +30,8 @@ const ProjectCard = ({ detail }) => {
       <ProjectDetail>
         <h2>{title}</h2>
         <p>{overview}</p>
-
         <ToolContainer>
-          <ul>
-            <li>{first}</li>
-            <li>{second}</li>
-            <li>{third}</li>
-          </ul>
+          <ul>{tool(tools)}</ul>
         </ToolContainer>
         <ButtonContainer>
           <CustomLink

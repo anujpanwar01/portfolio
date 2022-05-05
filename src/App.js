@@ -22,7 +22,6 @@ function App() {
   const { isOverlayOpen, setIsOverlayOpen } = useContext(OverlayContext);
   const { nav, setNav } = useContext(NavContext);
 
-  console.log(width);
   const overlayHandler = (e) => {
     e.currentTarget.style.display = "none";
     setIsOverlayOpen(!isOverlayOpen);

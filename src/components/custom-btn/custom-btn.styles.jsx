@@ -56,7 +56,7 @@ export const ThemeHandlerHover = styled.button`
 `;
 
 export const CustomButtonStyle = styled(ThemeHandlerHover)`
-  ${({ button }) => console.log(button)}
+
   color:${({ button, currenttheme }) =>
     button && commonThemeHanlder(currenttheme)}
   padding: ${({ headerButton }) => headerButton && "1.2rem 3rem !important"};

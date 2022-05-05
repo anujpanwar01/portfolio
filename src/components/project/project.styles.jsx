@@ -35,7 +35,7 @@ export const ProjectContainer = styled.div`
   h2 {
     font-size: 3.2rem;
     text-align: start;
-    margin: 1rem 0 1.2rem;
+    margin: 0 0 1.2rem;
     font-weight: 500;
   }
   p {

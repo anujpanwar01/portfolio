@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 import {
-  ColorDefault,
-  ColorSecondary,
-  ColorTertiary,
+  commonThemeHanlder,
+  themeHandler,
 } from "../../global-styles/common.styles";
 
 export const SocialContainer = styled.div`
@@ -25,20 +24,13 @@ export const IconContainer = styled.span`
 
   border-radius: 50%;
   margin-right: 3rem;
-  background-color: ${({ currentTheme }) =>
-    currentTheme === "black"
-      ? ColorSecondary
-      : currentTheme === "pink"
-      ? ColorTertiary
-      : ColorDefault};
+  background-color: ${({ currenttheme }) => commonThemeHanlder(currenttheme)};
+
 
   svg {
-    color: ${({ currentTheme }) => {
-      return currentTheme === "black"
-        ? "#000"
-        : currentTheme === "pink"
-        ? ColorDefault
-        : ColorTertiary;
-    }};
+    color: ${({ currenttheme }) =>
+      themeHandler(currenttheme, "black", "blue", "white")}
+     
+      };
   }
 `;

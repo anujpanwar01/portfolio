@@ -69,6 +69,10 @@ export const NavLinks = styled(Link)`
 
           border: 2px solid ${commonThemeHanlder(currenttheme)};
         `;
+      case "logo":
+        return css`
+          color: ${commonThemeHanlder(currenttheme)};
+        `;
       default:
         return;
     }

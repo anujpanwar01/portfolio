@@ -26,13 +26,14 @@
   }
   .logo-container {
     position: relative;
+    z-index: 100000;
     cursor: pointer;
     span {
       position: absolute;
 
       text-transform: uppercase;
       font-weight: 600;
-      top: 46%;
+      top: 44%;
       left: 50%;
       transform: translate(-50%, -50%);
     }

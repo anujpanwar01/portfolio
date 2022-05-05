@@ -38,6 +38,10 @@ export const SocialIconsContainer = styled.div`
   @supports not (gap: 2rem) {
     svg:not(:last-child) {
       margin-bottom: 2rem;
+
+      @media only screen and (max-width: 600px) {
+        margin: 0 2rem 0 0;
+      }
     }
   }
 `;
