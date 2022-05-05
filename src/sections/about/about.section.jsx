@@ -55,7 +55,7 @@ function Info() {
           $navLink="button"
           target="_blank"
           rel="noreferrer"
-          to="https://my.indeed.com/p/anujp-hskl1dp"
+          to="https://my.indeed.com/resume?hl=en&co=IN&from=gnav-homepage&_ga=2.196065263.2118486267.1651733864-1183829838.1637400331"
           download
           style={{ fontWeight: "500", fontSize: "1.8rem" }}
         >
