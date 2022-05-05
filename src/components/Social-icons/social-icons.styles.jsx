@@ -14,7 +14,6 @@ export const SocialIconsContainer = styled.div`
   top: 40%;
   cursor: pointer;
   z-index: 500;
-  grid-gap: ${({ about }) => (about ? "3rem" : "2rem")};
 
   @media only screen and (max-width: 900px) {
     left: 2.8rem;

@@ -40,6 +40,7 @@ const ProjectCard = ({ detail }) => {
             target="_blank"
             rel="noreferrer"
             to={netlify}
+            style={{ marginRight: "1.6rem" }}
           >
             Live view
           </CustomLink>

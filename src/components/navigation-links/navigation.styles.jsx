@@ -9,7 +9,6 @@ import {
 export const NavStyles = css`
   display: flex;
   flex-direction: column;
-  grid-gap: 2.4rem;
 
   bottom: 10%;
 `;
@@ -42,6 +41,8 @@ export const NavLinks = styled(Link)`
       case "toggler":
         return css`
           ${commonStyle(currenttheme)}
+          margin-bottom:2.4rem;
+          padding: 1.4rem 2rem;
           &:hover,
           &:active {
             border: 2px solid ${commonThemeHanlder(currenttheme)};
