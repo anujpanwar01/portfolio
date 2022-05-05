@@ -11,6 +11,9 @@ export const GlobalStyle = createGlobalStyle`
 }
 html {
   font-size: 62.5%;
+  @media only screen and (max-width:500px){
+   font-size:56.25%;
+  }
 }
 body {
   color: $color-text;
