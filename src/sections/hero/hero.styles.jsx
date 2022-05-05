@@ -36,13 +36,14 @@ export const HeroSection = styled.section`
       font-size: 7.2rem;
       letter-spacing: 1px;
       margin-bottom: 1.2rem;
+      font-weight: 600;
     }
   }
 `;
 
 export const HeroP = styled.p`
   font-size: 2.4rem;
-  margin-bottom: 0.6rem;
+  font-weight: 500;
   color: ${({ currenttheme }) =>
     themeHandler(currenttheme, ColorSecondary, ColorTertiary, ColorDefault)};
 `;
@@ -52,8 +53,9 @@ export const HeroH3 = styled.h3`
   margin-bottom: 4rem;
   position: relative;
   color: ${TextPremiumColor};
-  margin-bottom: 5rem;
-  letter-spacing: 0.5px;
+  margin-bottom: 6rem;
+  letter-spacing: 0.8px;
+  font-weight: 500;
   &::after {
     content: "";
     background-color: ${({ currenttheme }) =>

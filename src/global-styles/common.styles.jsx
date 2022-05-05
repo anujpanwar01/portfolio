@@ -10,8 +10,8 @@ export const TextPrimaryColor = "#fff";
 
 //////////////////////////////
 export const SectionHeading = styled.h3`
-  font-size: 3rem;
-  font-weight: 300;
+  font-size: 2rem;
+  font-weight: 500;
   color: ${({ currenttheme }) =>
     themeHandler(currenttheme, ColorSecondary, ColorTertiary, ColorDefault)};
 

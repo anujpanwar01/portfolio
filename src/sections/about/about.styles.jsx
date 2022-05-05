@@ -7,7 +7,7 @@ import {
 
 import { themeHandler } from "../../global-styles/common.styles";
 export const ImageContainer = styled.div`
-  width: 30%;
+  width: 31%;
   position: relative;
   box-sizing: content-box;
   background-size: cover;
@@ -63,16 +63,17 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 25%;
+  width: 30%;
   grid-gap: 0;
   h3 {
     text-align: left;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   h4 {
     color: white;
-    font-size: 2rem;
+    font-size: 3.2rem;
     margin-bottom: 1.6rem;
+    letter-spacing: 0.6px;
   }
   @media (max-width: 1300px) {
     width: 40%;
@@ -89,8 +90,9 @@ export const TextContainer = styled.div`
 `;
 export const AboutText = styled.aside`
   color: white;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.7;
   letter-spacing: 1px;
   margin-bottom: 3rem;
+  font-weight: 500;
 `;

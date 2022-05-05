@@ -35,11 +35,11 @@ export const ProjectContainer = styled.div`
   h2 {
     font-size: 3.2rem;
     text-align: start;
-    margin: 1rem 0;
-    font-weight: 300;
+    margin: 1rem 0 1.2rem;
+    font-weight: 500;
   }
   p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     text-align: start;
     line-height: 1.7;
   }
@@ -64,7 +64,7 @@ export const ImageContainer = styled.div`
     title === "Keeper App"
       ? "#EEEEEE"
       : title === "Panwar Cloth"
-      ? "#E6DDC6"
+      ? "#786eab"
       : null};
   background-size: cover;
   background-position: center;
@@ -98,6 +98,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   margin-top: 1rem;
   grid-gap: 1.6rem;
+
   @media (max-width: 56.25em) {
     margin-top: 2rem;
   }

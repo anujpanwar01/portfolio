@@ -12,13 +12,14 @@ const buttonLink = function (currenttheme) {
     color: ${commonThemeHanlder(currenttheme)};
     border: 2px solid ${commonThemeHanlder(currenttheme)};
     border-radius: 0.5rem;
+    font-weight: 600;
   `;
 };
 
 export const CustomLinks = styled.a`
   &:link,
   &:visited {
-    font-size: ${(props) => (props.$footerLink ? "1.6rem" : "1.4rem")};
+    font-size: ${(props) => (props.$footerLink ? "1.6rem" : "1.6rem")};
     color: ${(props) => props.$pageLink && TextPremiumColor};
    
     ${(props) => {

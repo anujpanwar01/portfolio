@@ -53,7 +53,7 @@ function Header() {
           handleChange={toggleHandler}
           style={{ marginLeft: "2rem" }}
         >
-          <span className="theme-btn-text "> Theme</span>
+          <span className="theme-btn-text ">Theme</span>
         </CustomBtn>
       </div>
     </div>
