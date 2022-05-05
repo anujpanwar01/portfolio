@@ -42,7 +42,7 @@ function Info() {
             visual effects and features that attract users.
           </p>
           <p>
-            <strong style={{ color: " #00ff14" }}>
+            <strong style={{ color: " #00ff14", fontWeight: "400" }}>
               {" "}
               “You define your own life. Don’t let other people write your
               script.”
@@ -58,6 +58,7 @@ function Info() {
           rel="noreferrer"
           to="https://my.indeed.com/p/anujp-hskl1dp"
           download
+          style={{ fontWeight: "500", fontSize: "1.8rem" }}
         >
           Download CV
         </CustomLink>

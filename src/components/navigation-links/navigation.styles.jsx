@@ -32,7 +32,7 @@ const commonStyle = function (currenttheme) {
 };
 
 export const NavLinks = styled(Link)`
-  font-size: ${({ link }) => (link === "toggler-link" ? "1.6rem" : "1.4rem")};
+  font-size: ${({ link }) => (link === "toggler-link" ? "1.8rem" : "1.6rem")};
   color: ${(props) => props.$pageLink && TextPremiumColor};
   cursor: pointer;
 

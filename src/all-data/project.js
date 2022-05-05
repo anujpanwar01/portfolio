@@ -1,5 +1,5 @@
 import keeper from "../assister/keeper-app.png";
-import PanwarCloth from "../assister/panwar-cloth.png";
+import PanwarCloth from "../assister/panwar.png";
 
 export const projectData = [
   {

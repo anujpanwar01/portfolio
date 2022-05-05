@@ -14,7 +14,7 @@ html {
 }
 body {
   color: $color-text;
-  font-family: "Montserrat", sans-serif;
+  font-family:"Rubik" ,"Montserrat", sans-serif;
   font-weight: 400;
   position: relative;
   overflow-x:hidden;
@@ -28,13 +28,15 @@ p {
   // color: inherit;
   line-height: 1.7;
   letter-spacing: 1px;
+  font-size:1.8rem;
 }
 .btn{
-    font-size: 1.6rem;
+    font-size: 2rem;
   padding: 1.4rem 3rem;
   border-radius: 0.5rem;
   cursor: pointer;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 `;
 // @import "./common-sass/common.styles.scss";

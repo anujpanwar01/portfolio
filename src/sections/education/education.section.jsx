@@ -8,7 +8,7 @@ import { EducationContainer } from "./education.styles";
 const EducationSection = () => {
   const { currentTheme } = useContext(ThemeContext);
   return (
-    <EducationContainer>
+    <EducationContainer id="education">
       <SectionHeading currenttheme={currentTheme}>Education</SectionHeading>
 
       {education.map(({ id, title, year, describe, college }) => {

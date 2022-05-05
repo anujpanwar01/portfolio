@@ -12,7 +12,7 @@ function Hero() {
     <HeroSection currenttheme={currentTheme} id="home">
       <Themes />
       <div>
-        <HeroP currenttheme={currentTheme}>Hey there &nbsp; I'm</HeroP>
+        <HeroP currenttheme={currentTheme}>Hey there&nbsp;I'm</HeroP>
         <h1>Anuj Panwar</h1>
         <HeroH3 currenttheme={currentTheme}>Frontend Developer</HeroH3>
         <NavLinks
