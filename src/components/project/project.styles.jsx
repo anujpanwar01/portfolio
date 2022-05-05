@@ -97,7 +97,7 @@ export const ProjectDetail = styled.div`
 export const ButtonContainer = styled.div`
   display: flex;
   margin-top: 1rem;
-  grid-gap: 1.6rem;
+  ${"" /* grid-gap: 1.6rem; */}
 
   @media (max-width: 56.25em) {
     margin-top: 2rem;

@@ -31,7 +31,10 @@ export const CustomLinks = styled.a`
             padding: 1.4rem 2rem;
             ${({ currenttheme }) => buttonLink(currenttheme)};
           `;
-
+        case "social-link":
+          return css`
+            margin: ${({ about }) => (about ? "0 3rem 0 0" : " 0 0 2rem")};
+          `;
         default:
           return;
       }
@@ -41,6 +44,7 @@ export const CustomLinks = styled.a`
     ${(props) => {
       switch (props.$navLink) {
         case "nav-link":
+        case "social-link":
           return css`
             color: ${({ currenttheme }) => commonThemeHanlder(currenttheme)};
           `;

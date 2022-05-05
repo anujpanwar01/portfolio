@@ -36,7 +36,8 @@ const SocialIcons = function ({ isAboutSection }) {
         <CustomLink
           key={Math.random() * 100}
           marginRight
-          $navLink={"nav-link"}
+          about={isAboutSection}
+          $navLink={"social-link"}
           currenttheme={currentTheme}
           to={to}
         >
