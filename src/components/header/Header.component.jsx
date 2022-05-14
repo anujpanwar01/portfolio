@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { ToggleContext } from "../../context/toggle.context";
 import { ThemeContext } from "../../context/theme.context";
-import "./Header.scss";
+// import "./Header.scss";
 import { BsDiamond } from "react-icons/bs";
 
 import CustomBtn from "../custom-btn/custom-btn.component";
+import { Head, LogoContainer } from "./Header.style";
 
-import { NavLinks } from "../navigation-links/navigation.styles";
 import NavigationLink from "../navigation-links/navigation-links.component";
 
 function Header() {
@@ -16,20 +16,20 @@ function Header() {
   const toggleHandler = () => setToggle(!toggle);
 
   return (
-    <div>
-      <div className="flex"></div>
-      <div className="header">
-        <NavLinks
+    <React.Fragment>
+      {/* <div className="flex"></div> */}
+      <Head>
+        <LogoContainer
           currenttheme={currentTheme}
           to={"home"}
           smooth={true}
           link="logo"
-          className="logo-container"
+          href="#"
         >
           <BsDiamond className={`logo icon`} size={46} />
 
           <span>ap</span>
-        </NavLinks>
+        </LogoContainer>
         {<NavigationLink identifier={"header"} />}
 
         <CustomBtn
@@ -42,8 +42,8 @@ function Header() {
         >
           <span className="theme-btn-text">Theme</span>
         </CustomBtn>
-      </div>
-    </div>
+      </Head>
+    </React.Fragment>
   );
 }
 
