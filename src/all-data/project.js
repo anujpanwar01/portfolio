@@ -1,5 +1,5 @@
-import keeper from "../assister/keeper-app.png";
-import PanwarCloth from "../assister/panwar.png";
+import keeper from "../assister/keeper.png";
+import PanwarCloth from "../assister/panwarCloth.jpg";
 
 export const projectData = [
   {
@@ -21,6 +21,8 @@ export const projectData = [
     id: 1000,
     title: "Keeper App",
     imgUrl: `${keeper}`,
+    overview:
+      "Some Times we forget important tasks or notes that matter for that I created this app you can add important notes and photos stuff and your data is stored till then here when do not do manually delete. I created this app with the help of these tools:- Redux-toolkit,  SCSS, Firebase, Redux-Persist.",
     tools: {
       first: "Html",
       second: "React",

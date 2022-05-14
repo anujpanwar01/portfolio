@@ -23,6 +23,7 @@ const NavigationLink = function ({ link, identifier, id }) {
           link={identifier}
           to={to}
           smooth={true}
+          href="#"
         >
           {content}
         </NavLinks>

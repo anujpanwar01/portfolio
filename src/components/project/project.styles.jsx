@@ -59,7 +59,6 @@ export const ToolContainer = styled.div`
   }
 `;
 export const ImageContainer = styled.div`
-  width: 50rem;
   background: ${({ title }) =>
     title === "Keeper App"
       ? "#EEEEEE"
@@ -70,11 +69,11 @@ export const ImageContainer = styled.div`
   background-position: center;
   border-radius: 0.5rem;
   ${"" /* margin-right: 5rem; */}
-  @media (max-width:1100px) {
+  @media only screen and (max-width:1100px) {
     width: 100%;
     margin-bottom: 5rem;
   }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     width: 100%;
     margin-bottom: 5rem;
   }
@@ -82,6 +81,7 @@ export const ImageContainer = styled.div`
   img {
     border-radius: 1rem;
     width: 100%;
+
     @media (max-width: 56.25em) {
       border-radius: 0.5rem;
     }

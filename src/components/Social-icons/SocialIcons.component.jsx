@@ -12,27 +12,31 @@ const SocialIcons = function ({ isAboutSection }) {
       content: <FaLinkedin size={28} />,
 
       to: "https://www.linkedin.com/in/anuj-panwar-a1390a229/",
+      label: "Linkedin",
     },
     {
       content: <FaGithub size={28} />,
 
       to: "https://github.com/anujpanwar01",
+      label: "Github",
     },
     {
       content: <FaTwitter size={28} />,
 
       to: "https://twitter.com/anujpanwar7911",
+      label: "Twitter",
     },
     {
       content: <FaInstagram size={28} />,
 
       to: "https://www.instagram.com/anujpanwar01/",
+      label: "Instagram",
     },
   ];
 
   return (
     <SocialIconsContainer currenttheme={currentTheme} about={isAboutSection}>
-      {iconsData.map(({ content, to }) => (
+      {iconsData.map(({ content, to, label }) => (
         <CustomLink
           key={Math.random() * 100}
           marginRight
@@ -40,6 +44,7 @@ const SocialIcons = function ({ isAboutSection }) {
           $navLink={"social-link"}
           currenttheme={currentTheme}
           to={to}
+          aria-label={label}
         >
           {content}
         </CustomLink>

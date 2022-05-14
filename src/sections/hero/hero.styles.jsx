@@ -32,7 +32,7 @@ export const HeroSection = styled.section`
     )}
 
   div {
-    h1 {
+    h2 {
       font-size: 7.2rem;
       letter-spacing: 1px;
       margin-bottom: 1.2rem;
@@ -41,7 +41,7 @@ export const HeroSection = styled.section`
   }
 `;
 
-export const HeroP = styled.p`
+export const HeroH1 = styled.h1`
   font-size: 2.4rem;
   font-weight: 500;
   color: ${({ currenttheme }) =>
