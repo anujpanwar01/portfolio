@@ -9,7 +9,7 @@ export const CustomInputContainer = styled.input`
   border-radius: 1rem;
   background: ${TextPremiumColor};
   border: none;
-  outline: #3e5649e8;
+  ${'' /* outline: #3e5649e8; */}
   @media (max-width: 800px) {
     width: 100%;
     margin-bottom: 2.5rem;
@@ -47,7 +47,7 @@ export const TextArea = styled.textarea`
   margin: 2rem 0;
   font-family: inherit;
   background: ${TextPremiumColor};
-  outline: #3e5649e8;
+  ${'' /* outline: #3e5649e8; */}
   letter-spacing: 1px;
   width: 100%;
   height: 10rem;
