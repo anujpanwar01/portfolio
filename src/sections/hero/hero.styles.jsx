@@ -5,9 +5,9 @@ import {
   ColorDefault,
   ColorSecondary,
   ColorTertiary,
-  defaultGradient,
-  secondaryGradient,
-  tertiaryGradient,
+  // defaultGradient,
+  // secondaryGradient,
+  // tertiaryGradient,
 } from "../../global-styles/common.styles";
 
 export const HeroSection = styled.section`
@@ -23,13 +23,15 @@ export const HeroSection = styled.section`
   background-position: center;
 
   ${"" /* for gradient */}
-  ${({ currenttheme }) =>
+  ${
+    "" /* ${({ currenttheme }) =>
     themeHandler(
       currenttheme,
       secondaryGradient,
       tertiaryGradient,
       defaultGradient
-    )}
+    )} */
+  }
 
   div {
     h2 {
