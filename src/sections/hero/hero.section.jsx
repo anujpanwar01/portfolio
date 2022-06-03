@@ -1,5 +1,5 @@
 import { ThemeContext } from "../../context/theme.context";
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import Themes from "../../components/themes/themes.component";
 import { HeroSection, HeroH3, HeroH1 } from "./hero.styles";
 
@@ -30,4 +30,4 @@ function Hero() {
     </HeroSection>
   );
 }
-export default Hero;
+export default memo(Hero);

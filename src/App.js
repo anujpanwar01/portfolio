@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { Fragment, useContext } from "react";
 import { ThemeContext } from "./context/theme.context";
 import { OverlayContext } from "./context/overlay.context";
 import Header from "./components/header/Header.component";
@@ -13,9 +13,11 @@ import { GlobalStyle } from "./global-styles/global.styles";
 import { NavContext } from "./context/nav.context";
 import useWindowDimensions from "./components/size-detecter/size-detecter";
 import "./App.scss";
-
+import { fileStore } from "./utils/firebase.utils";
 import ThankYou from "./components/thank-you/thank-you.component";
-
+import { createPortal } from "react-dom";
+import { ref } from "firebase/storage";
+import useFetch from "./hooks/use-fetch";
 function App() {
   const { width } = useWindowDimensions();
   const { currentTheme } = useContext(ThemeContext);
@@ -27,22 +29,47 @@ function App() {
     setIsOverlayOpen(!isOverlayOpen);
     setNav(!nav);
   };
+
+  const resumeDownloadPath = ref(
+    fileStore,
+    "gs://portfolio-f4722.appspot.com/cv/my-resume.pdf"
+  );
+
+  const myImgPath = ref(
+    fileStore,
+    "gs://portfolio-f4722.appspot.com/project/myimage.jpg"
+  );
+
+  const { isLoading: resumeLoad, url: resumeUrl } =
+    useFetch(resumeDownloadPath);
+  const { isLoading: myImgLoad, url: imgUrl, err } = useFetch(myImgPath);
+
   return (
-    <div className={`app ${currentTheme}`}>
-      <GlobalStyle />
-      <Header />
-      {width > 700 && <SocialIcons />}
-      <Hero />
-      <Info />
-      <EducationSection />
-      <Skill />
-      <ThankYou />
-      <ProjectPage />
-      <FooterSection />
-      {nav && isOverlayOpen && (
-        <div className="overlay" onClick={overlayHandler}></div>
+    <Fragment>
+      {resumeLoad && myImgLoad && (
+        <div style={{ fontSize: "15rem" }}>fetch</div>
       )}
-    </div>
+      {!resumeLoad && !myImgLoad && (
+        <div className={`app ${currentTheme}`}>
+          <GlobalStyle />
+          <Header />
+          {width > 700 && <SocialIcons />}
+          <Hero />
+          <Info imgUrl={imgUrl} url={resumeUrl} imgError={err} />
+          <EducationSection />
+          <Skill />
+          <ThankYou />
+          <ProjectPage />
+          <FooterSection />
+          {nav &&
+            isOverlayOpen &&
+            createPortal(
+              <div className="overlay" onClick={overlayHandler}></div>,
+              document.getElementById("overlay")
+            )}
+        </div>
+      )}
+    </Fragment>
   );
 }
 export default App;

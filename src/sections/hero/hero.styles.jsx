@@ -5,9 +5,6 @@ import {
   ColorDefault,
   ColorSecondary,
   ColorTertiary,
-  // defaultGradient,
-  // secondaryGradient,
-  // tertiaryGradient,
 } from "../../global-styles/common.styles";
 
 export const HeroSection = styled.section`
