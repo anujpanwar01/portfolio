@@ -8,6 +8,11 @@ export const ImageContainer = styled.div`
   background-size: cover;
   z-index: 1;
   margin-right: 5rem;
+  p {
+    color: red;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
   @media (max-width: 900px) {
     width: 60%;
     margin: 5rem 0 0;

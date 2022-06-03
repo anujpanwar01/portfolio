@@ -1,8 +1,7 @@
-import { useContext } from "react";
-
+import { useContext, memo, useRef, useEffect } from "react";
 import { ThemeContext } from "../../context/theme.context";
 import CustomLink from "../../components/custom-link/custom-link.component";
-import MyImage from "../../assister/myimage.jpg";
+
 import {
   AboutSection,
   ImageContainer,
@@ -13,17 +12,29 @@ import { SectionHeading } from "../../global-styles/common.styles";
 import SocialIcons from "../../components/Social-icons/SocialIcons.component";
 import useWindowDimensions from "../../components/size-detecter/size-detecter";
 
-function Info() {
+function Info(props) {
   const { currentTheme } = useContext(ThemeContext);
   const { width } = useWindowDimensions();
+  const imgRef = useRef();
+
+  useEffect(() => {
+    const refs = props.imgError;
+    if (refs) {
+      const img = imgRef.current;
+      img.style.alignSelf = "stretch";
+      img.style.background = "#e3e3e3ad";
+      img.style.zIndex = "1000";
+    }
+  }, [props]);
 
   return (
     <AboutSection id="about">
-      <ImageContainer currenttheme={currentTheme}>
+      <ImageContainer ref={imgRef} currenttheme={currentTheme}>
+        {props.imgError && <p>Img Not loaded. Something went wrong </p>}
         <img
           style={{ borderRadius: "0.5rem" }}
           width={"100%"}
-          src={MyImage}
+          src={props.imgUrl}
           alt="Anuj Panwar"
         />
       </ImageContainer>
@@ -55,7 +66,10 @@ function Info() {
           $navLink="button"
           target="_blank"
           rel="noreferrer"
-          to="https://my.indeed.com/resume?hl=en&co=IN&from=gnav-homepage&_ga=2.196065263.2118486267.1651733864-1183829838.1637400331"
+ master
+          to={props.url}
+          // to="https://my.indeed.com/p/anujp-hskl1dp"
+
           download
           style={{ fontWeight: "500", fontSize: "1.8rem" }}
         >
@@ -65,4 +79,4 @@ function Info() {
     </AboutSection>
   );
 }
-export default Info;
+export default memo(Info);

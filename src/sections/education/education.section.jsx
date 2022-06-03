@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import { ThemeContext } from "../../context/theme.context";
 import education from "../../all-data/education";
 import Education from "../../components/Education/education.component";
@@ -26,4 +26,4 @@ const EducationSection = () => {
     </EducationContainer>
   );
 };
-export default EducationSection;
+export default memo(EducationSection);

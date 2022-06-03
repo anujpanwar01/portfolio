@@ -1,12 +1,12 @@
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import { ThemeContext } from "../../context/theme.context";
 import ProjectCard from "../../components/project/projects.component";
 import { projectData } from "../../all-data/project.js";
 import { SectionHeading } from "../../global-styles/common.styles";
 import { SectionProjects, BgVideo } from "./projects.styles";
 import bgVideo from "../../assister/bg.mp4";
+
 const ProjectPage = () => {
-  // console.log(projects);
   const { currentTheme } = useContext(ThemeContext);
 
   return (
@@ -22,4 +22,4 @@ const ProjectPage = () => {
   );
 };
 
-export default ProjectPage;
+export default memo(ProjectPage);
