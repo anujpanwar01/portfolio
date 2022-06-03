@@ -35,7 +35,6 @@ function Info(props) {
           style={{ borderRadius: "0.5rem" }}
           width={"100%"}
           src={props.imgUrl}
-          ref={imgRef}
           alt="Anuj Panwar"
         />
       </ImageContainer>
