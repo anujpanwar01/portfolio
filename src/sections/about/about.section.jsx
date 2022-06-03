@@ -66,8 +66,10 @@ function Info(props) {
           $navLink="button"
           target="_blank"
           rel="noreferrer"
+ master
           to={props.url}
           // to="https://my.indeed.com/p/anujp-hskl1dp"
+
           download
           style={{ fontWeight: "500", fontSize: "1.8rem" }}
         >
