@@ -22,6 +22,8 @@ body {
   font-weight: 400;
   position: relative;
   overflow-x: hidden;
+  min-height: 100vh;
+  min-width: 100%;
 }
 p {
   // color: inherit;
@@ -36,4 +38,7 @@ p {
   border-radius: 0.5rem;
   cursor: pointer;
   letter-spacing: 1px;
+}
+.scroll-Top {
+  transform: translateY(7rem);
 }

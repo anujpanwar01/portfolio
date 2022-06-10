@@ -33,18 +33,22 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
     <title>Anuj Panwar</title>
+    <style>
+      /* #spinner {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+      } */
+    </style>
   </head>
   <body>
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-      <input type="name" name="name" />
-      <input type="email" name="email" />
-      <input type="number" name="number" />
-      <textarea type="comment" name="comment"></textarea>
-    </form>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <div id="overlay"></div>
+    <div id="spinner"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
