@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { commonThemeHanlder } from "../../global-styles/common.styles";
+import { commonThemeHanlder, scroll } from "../../global-styles/common.styles";
 
 export const ImageContainer = styled.div`
   width: 31%;
@@ -8,6 +8,7 @@ export const ImageContainer = styled.div`
   background-size: cover;
   z-index: 1;
   margin-right: 5rem;
+
   p {
     color: red;
     margin-bottom: 2rem;
@@ -43,8 +44,9 @@ export const AboutSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 20rem 0 15rem;
+  ${"" /* padding: 20rem 0 15rem; */}
   margin-bottom: 10rem;
+  ${scroll}
   ${"" /* grid-gap: 5rem; */}
 
   &:hover ${ImageContainer}::before {

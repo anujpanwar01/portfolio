@@ -17,26 +17,17 @@ function ContactForm() {
   };
   //input fields
   const [userInput, setUserInput] = useState(intialState);
-
-  // url encode for netlify
-  function encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  }
+  const [isLoading, setIsLoading] = useState(false);
 
   const submitHandler = function (event) {
-    // const userData = {
-    //   comment: userInput.comment,
-    //   email: userInput.email,
-    // };
-    fetch("/", {
+    if (!name || !email || !comment) {
+      return;
+    }
+    setIsLoading(true);
+    fetch("https://portfolio-f4722-default-rtdb.firebaseio.com/contact.json", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "contact",
+      body: JSON.stringify({
         ...userInput,
       }),
     })
@@ -46,11 +37,15 @@ function ContactForm() {
             "Your form Submission not submitted please try again."
           );
         }
-        console.log(res);
+
         setThankyou(!thankyou);
+        setIsLoading(false);
         return res;
       })
-      .catch((error) => alert(error));
+      .catch((error) => {
+        setIsLoading(false);
+        alert(error);
+      });
 
     event.preventDefault();
     //reset the input form value;
@@ -67,16 +62,10 @@ function ContactForm() {
   };
 
   const { name, email, comment, number } = userInput;
+
   return (
     <FormContainer onSubmit={submitHandler}>
       {/* <ThankYou /> */}
-      {/* for netlify bot */}
-      <CustomInput
-        type="hidden"
-        className="footer-form"
-        value="contact"
-        name="form-name"
-      />
 
       <CustomInput
         name="name"
@@ -123,7 +112,7 @@ function ContactForm() {
         type="submit"
         currenttheme={currentTheme}
       >
-        Submit
+        {isLoading ? "Submitting..." : " Submit"}
       </CustomBtn>
     </FormContainer>
   );

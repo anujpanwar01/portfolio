@@ -1,11 +1,11 @@
 import styled from "styled-components";
-
+import { scroll } from "../../global-styles/common.styles";
 export const FooterContainer = styled.section`
   display: flex;
-  ${"" /* font-size: 1.6rem; */}
   flex-direction: column;
   align-items: center;
   padding: 10rem 0 6rem;
+  ${scroll}
   p {
     font-size: 1.2rem;
   }

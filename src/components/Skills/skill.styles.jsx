@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { scroll } from "../../global-styles/common.styles";
 export const SkillSection = styled.section`
   padding: 12rem 8rem 14rem;
   position: relative;
@@ -9,6 +10,7 @@ export const SkillSection = styled.section`
   flex-direction: column;
   position: relative;
   margin-bottom: 10rem;
+  ${scroll}
 
   @media (max-width: 650px) {
     padding: 12rem 2rem 14rem;

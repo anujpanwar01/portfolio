@@ -67,3 +67,6 @@ export const tertiaryGradient = css`
     rgba(115, 75, 109, 1) 100%
   );
 `;
+export const scroll = css`
+  transition: transform 2s ease;
+`;
