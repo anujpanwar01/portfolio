@@ -24,10 +24,12 @@ function Info(props) {
   const { width } = useWindowDimensions();
   const imgRef = useRef();
   const { data, isLoading, error } = useGet("about", infoRefValue, {});
+  const { onFullLoadedInfo } = props;
 
   useEffect(() => {
+    Object.keys(state).length > 0 && onFullLoadedInfo(true);
     setState(data);
-  }, [data]);
+  }, [data, state, onFullLoadedInfo]);
 
   useEffect(() => {
     if (!infoRefValue) {
@@ -52,11 +54,7 @@ function Info(props) {
     content = <p>{error}</p>;
   } else {
     content = (
-      <AboutSection
-        id="about"
-        ref={infoRef}
-        className={infoRefValue ? "" : "scroll-Top"}
-      >
+      <>
         {infoRefValue && (
           <>
             <ImageContainer ref={imgRef} currenttheme={currentTheme}>
@@ -92,7 +90,6 @@ function Info(props) {
                 target="_blank"
                 rel="noreferrer"
                 to={props.url}
-                // to="https://my.indeed.com/p/anujp-hskl1dp"
                 download
                 style={{ fontWeight: "500", fontSize: "1.8rem" }}
               >
@@ -101,19 +98,16 @@ function Info(props) {
             </TextContainer>
           </>
         )}
-      </AboutSection>
+      </>
     );
   }
 
   return (
-    <AboutSection
-      id="about"
-      ref={infoRef}
-      className={infoRefValue ? "" : "scroll-Top"}
-    >
+    <AboutSection id="about" ref={infoRef}>
       {" "}
       {content}
     </AboutSection>
   );
 }
+
 export default memo(Info);

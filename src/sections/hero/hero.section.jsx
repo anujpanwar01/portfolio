@@ -5,7 +5,7 @@ import { HeroSection, HeroH3, HeroH1 } from "./hero.styles";
 
 import Toggler from "../../components/toggler/toggler.component";
 import { NavLinks } from "../../components/navigation-links/navigation.styles";
-function Hero() {
+function Hero(props) {
   const { currentTheme } = useContext(ThemeContext);
 
   return (
@@ -26,7 +26,7 @@ function Hero() {
           Let you know me!
         </NavLinks>
       </div>
-      <Toggler />
+      <Toggler {...props} />
     </HeroSection>
   );
 }

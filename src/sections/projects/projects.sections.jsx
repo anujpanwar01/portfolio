@@ -9,7 +9,7 @@ import useOnScreen from "../../hooks/use-onScreen";
 import useGet from "../../hooks/use-get";
 import { Spinner } from "../../components/loading-spinner/loading-spinner.styles";
 
-const ProjectPage = () => {
+const ProjectPage = (props) => {
   const projectRef = useRef();
   const projectOnScreen = useOnScreen(projectRef);
   const { currentTheme } = useContext(ThemeContext);
@@ -18,8 +18,9 @@ const ProjectPage = () => {
   const { data, isLoading, error } = useGet("project", projectRefValue, []);
 
   useEffect(() => {
+    projectData.length > 0 && props.onFullLoadedProject(true);
     setProjectData(data);
-  }, [data]);
+  }, [data, props, projectData]);
 
   useEffect(() => {
     if (!projectRefValue) {
@@ -50,11 +51,7 @@ const ProjectPage = () => {
     );
   }
   return (
-    <SectionProjects
-      id="projects"
-      ref={projectRef}
-      className={projectRefValue ? "" : "scroll-Top"}
-    >
+    <SectionProjects id="projects" ref={projectRef}>
       {content}
     </SectionProjects>
   );

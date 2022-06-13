@@ -7,6 +7,7 @@ import { NavProvider } from "./context/nav.context";
 import { ThankYouProvider } from "./context/thankyou.context";
 import { OverlayProvider } from "./context/overlay.context";
 import "./styles.scss";
+
 const rootElement = document.getElementById("root");
 const root = ReactDOM.createRoot(rootElement);
 root.render(

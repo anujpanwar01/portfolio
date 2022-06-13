@@ -21,6 +21,8 @@ import { ref } from "firebase/storage";
 import useFetch from "./hooks/use-fetch";
 import LoadingSpinner from "./components/loading-spinner/loading-spinner";
 
+import useLoad from "./hooks/use-load";
+
 const Hero = React.lazy(() => import("./sections/hero/hero.section"));
 
 function App() {
@@ -28,6 +30,15 @@ function App() {
   const { currentTheme } = useContext(ThemeContext);
   const { isOverlayOpen, setIsOverlayOpen } = useContext(OverlayContext);
   const { nav, setNav } = useContext(NavContext);
+  const { didPageLoad: didInfoLoad, loadingPage: infoLoadingPage } = useLoad();
+  const { didPageLoad: didEducationLoad, loadingPage: educationLoadingPage } =
+    useLoad();
+  const { didPageLoad: didSkillLoad, loadingPage: skillLoadingPage } =
+    useLoad();
+  const { didPageLoad: didProjectLoad, loadingPage: projectLoadingPage } =
+    useLoad();
+  const { didPageLoad: didContactLoad, loadingPage: contactLoadingPage } =
+    useLoad();
 
   const overlayHandler = (e) => {
     e.currentTarget.style.display = "none";
@@ -43,6 +54,13 @@ function App() {
   const { isLoading: resumeLoad, url: resumeUrl } =
     useFetch(resumeDownloadPath);
 
+  const navLinks = {
+    about: didInfoLoad,
+    education: didEducationLoad,
+    project: didProjectLoad,
+    skills: didSkillLoad,
+    contact: didContactLoad,
+  };
   return (
     <Suspense
       fallback={createPortal(
@@ -60,16 +78,22 @@ function App() {
       {!resumeLoad && (
         <div className={`app ${currentTheme}`}>
           <GlobalStyle />
-          <Header />
+          <Header {...navLinks} />
           {width > 700 && <SocialIcons />}
-          <Hero />
-          <Info url={resumeUrl} />
-          <EducationSection />
-          <Skill />
+          <Hero {...navLinks} />
+          <Info url={resumeUrl} onFullLoadedInfo={infoLoadingPage} />
+          {didInfoLoad && (
+            <EducationSection onFullLoadedEducation={educationLoadingPage} />
+          )}
+          {didEducationLoad && <Skill onFullLoadedSkill={skillLoadingPage} />}
 
           <ThankYou />
-          <ProjectPage />
-          <FooterSection />
+          {didSkillLoad && (
+            <ProjectPage onFullLoadedProject={projectLoadingPage} />
+          )}
+          {didProjectLoad && (
+            <FooterSection onFullLoadedContact={contactLoadingPage} />
+          )}
           {nav &&
             isOverlayOpen &&
             createPortal(

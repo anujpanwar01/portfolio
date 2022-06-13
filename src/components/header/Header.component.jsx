@@ -9,10 +9,10 @@ import { Head, LogoContainer } from "./Header.style";
 
 import NavigationLink from "../navigation-links/navigation-links.component";
 
-function Header() {
+function Header(props) {
   const { toggle, setToggle } = useContext(ToggleContext);
   const { currentTheme } = useContext(ThemeContext);
-
+  console.log(props);
   const toggleHandler = () => setToggle(!toggle);
 
   return (
@@ -30,7 +30,7 @@ function Header() {
 
           <span>ap</span>
         </LogoContainer>
-        {<NavigationLink identifier={"header"} />}
+        {<NavigationLink identifier={"header"} {...props} />}
 
         <CustomBtn
           button="button"

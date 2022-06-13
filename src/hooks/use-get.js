@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useGet = (store, fetching, init) => {
+  // console.log(fetching);
   const [data, setData] = useState(init);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");

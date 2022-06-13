@@ -6,11 +6,15 @@ import CustomLink from "../../components/custom-link/custom-link.component";
 import { SectionHeading } from "../../global-styles/common.styles";
 import { FooterContainer, Contact } from "./footer.styles";
 import useOnScreen from "../../hooks/use-onScreen";
-const FooterSection = () => {
+const FooterSection = (props) => {
   const footerRef = useRef();
   const { currentTheme } = useContext(ThemeContext);
   const footerOnScreen = useOnScreen(footerRef);
   const [footerRefValue, setFooterRefValue] = useState(false);
+
+  setTimeout(() => {
+    props.onFullLoadedContact(true);
+  }, 500);
 
   useEffect(() => {
     if (!footerRefValue) {
@@ -19,11 +23,7 @@ const FooterSection = () => {
   }, [footerRefValue, footerOnScreen]);
 
   return (
-    <FooterContainer
-      id="footer"
-      ref={footerRef}
-      className={footerRefValue ? "" : "scroll-Top"}
-    >
+    <FooterContainer id="footer" ref={footerRef}>
       {footerRefValue && (
         <>
           <SectionHeading currenttheme={currentTheme}>
