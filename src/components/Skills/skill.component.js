@@ -11,12 +11,15 @@ import {
 } from "./skill.styles";
 import useOnScreen from "../../hooks/use-onScreen";
 
-function Skills() {
+function Skills(props) {
   const skillRef = useRef();
   const skillOnScreen = useOnScreen(skillRef);
   const { currentTheme } = useContext(ThemeContext);
   const [skillRefValue, setSkillRefValue] = useState(false);
 
+  setTimeout(() => {
+    props.onFullLoadedSkill(true);
+  }, 1000);
   useEffect(() => {
     if (!skillRefValue) {
       setSkillRefValue(skillOnScreen);

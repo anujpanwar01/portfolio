@@ -8,7 +8,7 @@ import useOnScreen from "../../hooks/use-onScreen";
 import useGet from "../../hooks/use-get";
 import { Spinner } from "../../components/loading-spinner/loading-spinner.styles";
 
-const EducationSection = () => {
+const EducationSection = (props) => {
   const educationRef = useRef();
   const educationOnScreen = useOnScreen(educationRef);
   const { currentTheme } = useContext(ThemeContext);
@@ -17,8 +17,9 @@ const EducationSection = () => {
   const { data, isLoading, error } = useGet("education", educationRefValue, []);
 
   useEffect(() => {
+    education.length > 0 && props.onFullLoadedEducation(true);
     setEducation(data);
-  }, [data]);
+  }, [data, props, education]);
 
   useEffect(() => {
     if (!educationRefValue) {
@@ -53,13 +54,10 @@ const EducationSection = () => {
   }
 
   return (
-    <EducationContainer
-      id="education"
-      ref={educationRef}
-      className={educationRefValue ? "" : "scroll-Top"}
-    >
+    <EducationContainer id="education" ref={educationRef}>
       {content}
     </EducationContainer>
   );
 };
+
 export default memo(EducationSection);

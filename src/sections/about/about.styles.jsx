@@ -45,7 +45,7 @@ export const AboutSection = styled.section`
   justify-content: center;
   align-items: flex-start;
   ${"" /* padding: 20rem 0 15rem; */}
-  margin-bottom: 10rem;
+  ${"" /* margin-bottom: 10rem; */}
   ${scroll}
   ${"" /* grid-gap: 5rem; */}
 

@@ -24,7 +24,7 @@ const commonStyle = function (currenttheme) {
     margin-right: 0rem;
     padding: 1.2rem 2rem;
     border-radius: 0.5rem;
-
+    transition: all 500ms ease-in;
     color: ${commonThemeHanlder(currenttheme)};
   `;
   return common;
