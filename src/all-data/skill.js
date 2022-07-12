@@ -26,10 +26,6 @@ export const skillData = [
     iconName: "SCSS",
   },
   {
-    icon: <DiJava />,
-    iconName: "Java",
-  },
-  {
     icon: <FaReact />,
     iconName: "React",
   },
@@ -52,10 +48,6 @@ export const skillData = [
   {
     icon: <DiVisualstudio />,
     iconName: "Visual Studio",
-  },
-  {
-    icon: <SiIntellijidea />,
-    iconName: "IntelliJ IDEA",
   },
   {
     icon: <SiNetlify />,
