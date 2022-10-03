@@ -14,7 +14,7 @@ export const HeroSection = styled.section`
   font-family: inherit;
   text-align: center;
   height: 100vh;
-  padding: 20rem 12rem;
+  align-items:center;
   margin-bottom: 10rem;
   background-size: cover;
   background-position: center;

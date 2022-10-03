@@ -4,7 +4,6 @@ import { ThemeContext } from "../../context/theme.context";
 import { Navigation, NavLinks } from "./navigation.styles";
 
 const NavigationLink = function ({ link, identifier, id, ...props }) {
-  console.log(props);
   const { currentTheme } = useContext(ThemeContext);
 
   const linkData = [

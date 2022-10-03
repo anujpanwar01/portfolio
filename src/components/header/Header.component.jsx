@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ToggleContext } from "../../context/toggle.context";
 import { ThemeContext } from "../../context/theme.context";
-// import "./Header.scss";
+
 import { BsDiamond } from "react-icons/bs";
 
 import CustomBtn from "../custom-btn/custom-btn.component";
@@ -12,7 +12,6 @@ import NavigationLink from "../navigation-links/navigation-links.component";
 function Header(props) {
   const { toggle, setToggle } = useContext(ToggleContext);
   const { currentTheme } = useContext(ThemeContext);
-  console.log(props);
   const toggleHandler = () => setToggle(!toggle);
 
   return (

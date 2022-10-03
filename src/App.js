@@ -20,7 +20,7 @@ import { createPortal } from "react-dom";
 import { ref } from "firebase/storage";
 import useFetch from "./hooks/use-fetch";
 import LoadingSpinner from "./components/loading-spinner/loading-spinner";
-
+import Experience from "./sections/experience/experience.section";
 import useLoad from "./hooks/use-load";
 
 const Hero = React.lazy(() => import("./sections/hero/hero.section"));
@@ -31,6 +31,8 @@ function App() {
   const { isOverlayOpen, setIsOverlayOpen } = useContext(OverlayContext);
   const { nav, setNav } = useContext(NavContext);
   const { didPageLoad: didInfoLoad, loadingPage: infoLoadingPage } = useLoad();
+  const { didPageLoad: didExperienceLoad, loadingPage: experienceLoadingPage } =
+    useLoad();
   const { didPageLoad: didEducationLoad, loadingPage: educationLoadingPage } =
     useLoad();
   const { didPageLoad: didSkillLoad, loadingPage: skillLoadingPage } =
@@ -56,11 +58,13 @@ function App() {
 
   const navLinks = {
     about: didInfoLoad,
+    experience: didExperienceLoad,
     education: didEducationLoad,
     project: didProjectLoad,
     skills: didSkillLoad,
     contact: didContactLoad,
   };
+
   return (
     <Suspense
       fallback={createPortal(
@@ -83,6 +87,13 @@ function App() {
           <Hero {...navLinks} />
           <Info url={resumeUrl} onFullLoadedInfo={infoLoadingPage} />
           {didInfoLoad && (
+            <Experience
+              // loading={kmLoading}
+              // companyListImg={companyList}
+              onFullLoadedExeperience={experienceLoadingPage}
+            />
+          )}
+          {didExperienceLoad && (
             <EducationSection onFullLoadedEducation={educationLoadingPage} />
           )}
           {didEducationLoad && <Skill onFullLoadedSkill={skillLoadingPage} />}
