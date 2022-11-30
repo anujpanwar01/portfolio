@@ -10,6 +10,7 @@ import {
 export const HeroSection = styled.section`
   display: flex;
   justify-content: space-around;
+  align-items: center;
   color: ${TextPremiumColor};
   font-family: inherit;
   text-align: center;
