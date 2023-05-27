@@ -1,0 +1,3 @@
+[build]
+  command = "npm run build"  # The build command for your project
+  publish = "build/"  # The directory to deploy
